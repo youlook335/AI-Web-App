@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "../Styles/Style.css";
+import "../Styles/Navbar.css";
 import { FaSearch, FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
@@ -35,7 +35,7 @@ const Navbar = () => {
         <div className={`collapse navbar-collapse ${menuOpen ? "show" : ""}`}>
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <Link className="nav-link text-dark hover-underline " to="/Home" onClick={() => setMenuOpen(false)}>
+              <Link className="nav-link text-dark hover-underline " to="/" onClick={() => setMenuOpen(false)}>
                 Home
               </Link>
             </li>
