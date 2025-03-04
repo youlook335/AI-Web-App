@@ -1,9 +1,9 @@
 import React from "react";
-import { Button } from "react-bootstrap";
+// import { Button } from "react-bootstrap";
 import "../Styles/WhatsAppButton.css";
 
 const WhatsAppButton = () => {
-  const phoneNumber = "923001234567"; // اپنا WhatsApp نمبر یہاں ڈالیں
+  const phoneNumber = "+92 325-7048-768"; 
 
   return (
     <a

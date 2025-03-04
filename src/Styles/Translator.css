@@ -1,0 +1,32 @@
+#translatorId {
+    position: fixed;
+    bottom: -15px;
+    left: 35px;
+    bottom: 50px;
+    z-index: 25;
+}
+
+
+.lang-img {
+    width: 50px;
+    height: 50px;
+    filter: brightness(0) saturate(100%) invert(32%) sepia(99%) saturate(600%) hue-rotate(184deg) brightness(95%) contrast(90%);
+}
+
+.goog-te-combo {
+    display: none !important;
+}
+
+.lang-menu {
+    background-color: #00000055;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.lang-menu div {
+    width: 140px;
+    border-bottom: 1px solid #00000088;
+    cursor: pointer;
+}
