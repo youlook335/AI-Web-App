@@ -14,6 +14,7 @@ import Blog from "./component/Blog";
 import Privacy from "./component/Privacy";
 import ChatButton from "./component/ChatButton";
 import Cursor from "./component/Cursor";
+import WhatsAppButton from "./component/WhatsAppButton";
 
 function App() {
     return (
@@ -32,6 +33,7 @@ function App() {
                     <Route path="/Help" element={<Help />} />
                 </Routes>
                 <ChatButton/>
+                <WhatsAppButton/>
             <Footer/>
         </>
     );

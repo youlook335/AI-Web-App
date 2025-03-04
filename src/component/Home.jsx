@@ -93,11 +93,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="footer text-center py-5 bg-dark text-white">
-        <p className="lead">© 2025 AI Solutions | Privacy Policy | Terms of Service</p>
-      </footer>
     </div>
   );
 };
