@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "../Styles/Cursor.css"; // Cursor کی اسٹائلنگ
 
 const Cursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });

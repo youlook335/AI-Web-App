@@ -13,7 +13,7 @@ import Translater from "./component/Translater.jsx";
 
 createRoot(document.getElementById("root")).render(
     <BrowserRouter>
-    {/* <Cursor/> */}
+    <Cursor/>
     <Navbar/>
     <ChatButton/>
     <WhatsAppButton/>
