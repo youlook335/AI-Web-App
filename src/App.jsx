@@ -13,10 +13,12 @@ import Help from "./component/Help";
 import Blog from "./component/Blog";
 import Privacy from "./component/Privacy";
 import ChatButton from "./component/ChatButton";
+import Cursor from "./component/Cursor";
 
 function App() {
     return (
         <>
+        <Cursor/>
             <Navbar/>
                 <Routes>
                     <Route path="/Home" element={<Home />} />
