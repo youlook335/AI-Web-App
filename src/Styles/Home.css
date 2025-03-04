@@ -1,108 +1,46 @@
-/* Global Styles */
-body {
-    font-family: "Arial", sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa;
-  }
-  
-  /* Dark Mode */
-  .dark-mode {
+.dark-mode {
     background-color: #121212;
     color: white;
-  }
-  
-  .light-mode {
-    background-color: white;
-    color: black;
-  }
-  
-  /* Navbar */
-  .navbar {
-    padding: 1rem;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  /* Hero Section */
-  .hero-section {
+}
+.hero-section {
     height: 100vh;
     background: linear-gradient(to right, #6a11cb, #2575fc);
     color: white;
     padding: 5rem 1rem;
-  }
-  
-  .hero-title {
+}
+.hero-title {
     font-size: 4rem;
     font-weight: bold;
-  }
-  
-  .hero-subtitle {
+}
+.hero-subtitle {
     font-size: 1.5rem;
-  }
-  
-  /* Search Section */
-  .search-section {
-    background: #fff;
-    padding: 5rem 1rem;
-    border-radius: 10px;
-  }
-  
-  .search-input {
-    width: 50%;
-    margin: auto;
-    border: 2px solid #2575fc;
-    border-radius: 25px;
-    padding: 1rem;
-    font-size: 1.2rem;
-  }
-  
-  /* AI Features */
-  .feature-card {
+}
+.feature-card {
     background: #f1f1f1;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
-  }
-  
-  .feature-card:hover {
+}
+.feature-card:hover {
     transform: translateY(-5px);
-  }
-  
-  /* AI Applications */
-  .app-card {
+}
+.app-card {
     background: #e3f2fd;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
-  }
-  
-  .app-card:hover {
+}
+.app-card:hover {
     transform: translateY(-5px);
-  }
-  
-  /* AI Demo Section */
-  .ai-demo-section {
+}
+.ai-demo-section {
     background: linear-gradient(to right, #ff416c, #ff4b2b);
     color: white;
     padding: 5rem 1rem;
-  }
-  
-  /* Testimonials */
-  .testimonial-card {
+}
+.testimonial-card {
     background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 2rem;
-  }
-  
-  /* Footer */
-  .footer {
-    background: #343a40;
-    color: white;
-    padding: 2rem;
-  }
-  
-  .footer p {
-    margin: 0;
-  }
-  
+}
