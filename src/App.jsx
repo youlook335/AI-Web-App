@@ -12,6 +12,7 @@ import Faqs from "./component/Faqs";
 import Help from "./component/Help";
 import Blog from "./component/Blog";
 import Privacy from "./component/Privacy";
+import ChatButton from "./component/ChatButton";
 
 function App() {
     return (
@@ -28,6 +29,7 @@ function App() {
                     <Route path="/Faqs" element={<Faqs />} />
                     <Route path="/Help" element={<Help />} />
                 </Routes>
+                <ChatButton/>
             <Footer/>
         </>
     );
