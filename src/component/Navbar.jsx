@@ -20,7 +20,7 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <nav className={`sticky-top navbar navbar-expand-lg custom-navbar ${scrolled ? "navbar-scrolled" : ""}`}>
+    <nav className={`navbar navbar-expand-lg custom-navbar ${scrolled ? "navbar-scrolled" : ""}`}>
       <div className="container">
         <Link className="navbar-brand fw-bold text-dark" to="/">
           Boot<span className="text-primary">Press</span>
