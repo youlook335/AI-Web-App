@@ -16,9 +16,9 @@ createRoot(document.getElementById("root")).render(
             <Cursor />
             <Navbar />
             <ChatButton />
-            <WhatsAppButton/>
             <App />
-            <Translater/>
             <Footer />
+            <Translater/>
+            <WhatsAppButton/>
         </BrowserRouter>
 );
