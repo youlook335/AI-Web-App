@@ -29,15 +29,15 @@ const ChatButton = () => {
   return (
     <div ref={inputRef} className="position-fixed bottom-0 start-50 translate-middle-x p-3">
       <div
-        className={`d-flex align-items-center bg-white shadow-lg rounded-pill px-3 ${isExpanded ? "py-2 w-100" : "py-1"}`}
+        className={`d-flex align-items-center bg-primary shadow-lg rounded-pill px-3 ${isExpanded ? "py-2 w-100" : "py-1"}`}
         style={{ maxWidth: "350px", transition: "0.3s" }}
       >
         {/* Button (Works as Input Toggle) */}
         <button
-          className={`btn ${isExpanded ? "btn-primary" : "btn-light"} rounded-pill flex-grow-1 text-start`}
+          className={`btn ${isExpanded ? "btn-primary" : "btn-primary"} rounded-pill flex-grow-1 fw-bold text-start`}
           onClick={() => setIsExpanded(true)}
         >
-          {isExpanded ? "Type your message..." : "Ask ChatGPT"}
+          {isExpanded ? "Type your message..." : "Ask BootPress"}
         </button>
 
         {/* Input Field (Only visible when expanded) */}

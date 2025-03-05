@@ -8,7 +8,7 @@ const WhatsAppButton = () => {
   return (
     <a
       href={`https://wa.me/${phoneNumber}`}
-      className="whatsapp-btn btn btn-success rounded-circle d-flex align-items-center justify-content-center"
+      className="whatsapp-btn btn btn-success bg-primary rounded-circle d-flex align-items-center justify-content-center"
       target="_blank"
       rel="noopener noreferrer"
     >
