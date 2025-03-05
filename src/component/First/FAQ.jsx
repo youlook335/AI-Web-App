@@ -21,10 +21,10 @@ function FAQ() {
   ];
 
   return (
-    <section className="faq py-5" style={{ backgroundColor: '#f8f9fa' }}>
+    <section className="faq py-5" >
       <div className="container" style={{ maxWidth: '1000px' }}>
-        <div className="row">
-          <div className="col-md-12 text-center mb-5">
+        <div className="row" >
+          <div className="col-md-12 text-center mb-5" >
             <h2 className="fw-bold text-dark">Frequently Asked Questions</h2>
             <p className="text-muted">Common questions about AI and our services</p>
           </div>
