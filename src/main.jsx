@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
-import {createRoot} from "react-dom/client";
+import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -12,13 +12,13 @@ import Footer from "./component/Footer.jsx";
 import Translater from "./component/Translater.jsx";
 
 createRoot(document.getElementById("root")).render(
-    <BrowserRouter>
-    <Cursor/>
-    <Navbar/>
-    <ChatButton/>
-    <WhatsAppButton/>
-    <Translater/>
-        <App />
-    <Footer/>
-    </BrowserRouter>
+        <BrowserRouter>
+            <Cursor />
+            <Navbar />
+            <ChatButton />
+            <WhatsAppButton/>
+            <App />
+            <Translater/>
+            <Footer />
+        </BrowserRouter>
 );

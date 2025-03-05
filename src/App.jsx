@@ -11,11 +11,11 @@ import Help from "./component/Help";
 import Blog from "./component/Blog";
 import Privacy from "./component/Privacy";
 
-function App() {
+function App() {    
     return (
         <>
                 <Routes>
-                    <Route path="/Home" element={<Home />} />
+                    <Route path="/" element={<Home />} />
                     <Route path="/About" element={<About />} />
                     <Route path="/Services" element={<Services />} />
                     <Route path="/Projects" element={<Projects />} />

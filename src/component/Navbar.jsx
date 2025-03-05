@@ -22,7 +22,7 @@ const Navbar = () => {
   return (
     <nav className={`sticky-top navbar navbar-expand-lg custom-navbar ${scrolled ? "navbar-scrolled" : ""}`}>
       <div className="container">
-        <Link className="navbar-brand fw-bold text-dark" to="/Home">
+        <Link className="navbar-brand fw-bold text-dark" to="/">
           Boot<span className="text-primary">Press</span>
         </Link>
         <button
@@ -35,7 +35,7 @@ const Navbar = () => {
         <div className={`collapse navbar-collapse ${menuOpen ? "show" : ""}`}>
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <Link className="nav-link text-dark hover-underline " to="/Home" onClick={() => setMenuOpen(false)}>
+              <Link className="nav-link text-dark hover-underline " to="/" onClick={() => setMenuOpen(false)}>
                 Home
               </Link>
             </li>
