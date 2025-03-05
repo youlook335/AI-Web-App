@@ -5,28 +5,22 @@ import { FaStar, FaStarHalfAlt } from 'react-icons/fa';
 function Testimonials() {
   const aiTestimonials = [
     {
-      name: "DeepSeek AI",
-      feedback: "Our collaboration with this AI platform has led to remarkable advancements in AI research.",
-      img: "https://upload.wikimedia.org/wikipedia/commons/3/3f/DeepSeek_logo.png",
-      rating: 5,
-    },
-    {
       name: "OpenAI",
       feedback: "This AI-powered app has set new standards in automation and AI-driven solutions.",
       img: "https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg",
       rating: 4.5,
     },
     {
-      name: "Gemini AI",
-      feedback: "An innovative AI tool that enhances machine learning workflows efficiently.",
-      img: "https://upload.wikimedia.org/wikipedia/commons/8/8c/Google_Gemini_Logo.png",
-      rating: 4.8,
+      name: "DeepSeek AI",
+      feedback: "Our collaboration with this AI platform has led to remarkable advancements in AI research.",
+      img: "public/deepseek-translation.png",
+      rating: 5,
     },
     {
-      name: "Anthropic AI",
-      feedback: "The advanced AI solutions provided here have significantly improved our NLP models.",
-      img: "https://upload.wikimedia.org/wikipedia/en/thumb/8/89/Anthropic_logo.svg/640px-Anthropic_logo.svg.png",
-      rating: 4.7,
+      name: "Gemini AI",
+      feedback: "An innovative AI tool that enhances machine learning workflows efficiently.",
+      img: "Google_Gemini_logo.svg.png",
+      rating: 4.8,
     },
     {
       name: "Microsoft AI",
@@ -34,10 +28,17 @@ function Testimonials() {
       img: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
       rating: 5,
     },
+    
+    {
+      name: "Anthropic AI",
+      feedback: "The advanced AI solutions provided here have significantly improved our NLP models.",
+      img: "anthoric.png",
+      rating: 4.7,
+    },
     {
       name: "Meta AI",
       feedback: "A game-changer in AI technology, offering unparalleled insights and automation.",
-      img: "https://upload.wikimedia.org/wikipedia/commons/a/a3/Meta_Logo.svg",
+      img: "Meta-AI.png",
       rating: 4.6,
     },
   ];

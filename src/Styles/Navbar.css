@@ -22,7 +22,6 @@
     position: relative;
 }
 .hover-underline::after {
-    content: "";
     position: absolute;
     left: 50%;
     bottom: -2px;
@@ -38,6 +37,7 @@
 .search-input {
     background: #f8f9fa;
     border: 1px solid #ddd;
+    width: 230px;
     border-radius: 20px;
     padding: 5px 15px;
 }

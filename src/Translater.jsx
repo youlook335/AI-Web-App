@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import '../Styles/Translator.css';
-import img from '../assets/translate.png';
+import '../src/Styles/Translator.css';
+import img from '../public/translate.png';
 
 const Translater = () => {
     const [menuOpen, setMenuOpen] = useState(false);
