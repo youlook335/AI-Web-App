@@ -1,5 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { FaStar, FaStarHalfAlt } from 'react-icons/fa';
 
 function Testimonials() {
   const aiTestimonials = [
@@ -7,45 +8,62 @@ function Testimonials() {
       name: "DeepSeek AI",
       feedback: "Our collaboration with this AI platform has led to remarkable advancements in AI research.",
       img: "https://upload.wikimedia.org/wikipedia/commons/3/3f/DeepSeek_logo.png",
+      rating: 5,
     },
     {
       name: "OpenAI",
       feedback: "This AI-powered app has set new standards in automation and AI-driven solutions.",
       img: "https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg",
+      rating: 4.5,
     },
     {
       name: "Gemini AI",
       feedback: "An innovative AI tool that enhances machine learning workflows efficiently.",
       img: "https://upload.wikimedia.org/wikipedia/commons/8/8c/Google_Gemini_Logo.png",
+      rating: 4.8,
+    },
+    {
+      name: "Anthropic AI",
+      feedback: "The advanced AI solutions provided here have significantly improved our NLP models.",
+      img: "https://upload.wikimedia.org/wikipedia/en/thumb/8/89/Anthropic_logo.svg/640px-Anthropic_logo.svg.png",
+      rating: 4.7,
+    },
+    {
+      name: "Microsoft AI",
+      feedback: "This AI web app has delivered exceptional performance in AI-driven cloud solutions.",
+      img: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
+      rating: 5,
+    },
+    {
+      name: "Meta AI",
+      feedback: "A game-changer in AI technology, offering unparalleled insights and automation.",
+      img: "https://upload.wikimedia.org/wikipedia/commons/a/a3/Meta_Logo.svg",
+      rating: 4.6,
     },
   ];
 
-  const userTestimonials = [
-    {
-      name: "John Doe",
-      feedback: "This app has completely revolutionized the way I work!",
-      img: "https://randomuser.me/api/portraits/men/32.jpg",
-    },
-    {
-      name: "Jane Smith",
-      feedback: "Fantastic user experience and top-notch AI features.",
-      img: "https://randomuser.me/api/portraits/women/44.jpg",
-    },
-    {
-      name: "Michael Johnson",
-      feedback: "I love the seamless integration and modern design.",
-      img: "https://randomuser.me/api/portraits/men/65.jpg",
-    },
-  ];
+  // Function to generate star ratings
+  const renderStars = (rating) => {
+    const fullStars = Math.floor(rating);
+    const halfStar = rating % 1 !== 0;
+    
+    return (
+      <>
+        {[...Array(fullStars)].map((_, i) => (
+          <FaStar key={i} className="text-warning" />
+        ))}
+        {halfStar && <FaStarHalfAlt className="text-warning" />}
+      </>
+    );
+  };
 
   return (
     <section className="testimonials py-5 bg-light text-center">
       <div className="container">
-        <h2 className="display-4 text-primary fw-bold">What Experts & Users Say</h2>
-        <p className="lead mb-4">Feedback from top AI companies and our users</p>
+        <h2 className="display-4 text-primary fw-bold">AI Companies' Testimonials</h2>
+        <p className="lead mb-4">Trusted by the world's leading AI companies</p>
 
-        {/* AI Companies Testimonials */}
-        <div className="row mb-5">
+        <div className="row">
           {aiTestimonials.map((testimonial, index) => (
             <div key={index} className="col-md-4 mb-4">
               <div className="card shadow-sm p-4 border-0">
@@ -57,24 +75,7 @@ function Testimonials() {
                 />
                 <h5 className="fw-bold">{testimonial.name}</h5>
                 <p className="text-muted">{testimonial.feedback}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* User Testimonials */}
-        <div className="row">
-          {userTestimonials.map((testimonial, index) => (
-            <div key={index} className="col-md-4 mb-4">
-              <div className="card shadow-sm p-4 border-0">
-                <img 
-                  src={testimonial.img} 
-                  alt={testimonial.name} 
-                  className="rounded-circle mx-auto d-block mb-3"
-                  style={{ width: '100px', height: '100px', objectFit: 'cover' }}
-                />
-                <h5 className="fw-bold">{testimonial.name}</h5>
-                <p className="text-muted">{testimonial.feedback}</p>
+                <div className="mb-2">{renderStars(testimonial.rating)}</div>
               </div>
             </div>
           ))}
