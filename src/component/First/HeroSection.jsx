@@ -1,20 +1,28 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
 function HeroSection() {
   return (
-    <section className="hero bg-primary text-white py-5">
+    <section className="hero text-white py-5" style={{
+      background: 'linear-gradient(135deg, #1a1a2e, #16213e)',
+      minHeight: '70vh',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      textAlign: 'center'
+    }}>
       <div className="container">
-        <div className="row">
-          <div className="col-md-12 text-center">
-            <h1>Introduction to AI Web App</h1>
-            <p className="tagline">Tagline that describes your app.</p>
-            <button className="cta-button btn btn-lg btn-warning">Call to Action</button>
-          </div>
-        </div>
+        <h1 className="display-2 fw-bold animate__animated animate__fadeInDown">Experience the Future of AI</h1>
+        <p className="lead mt-3 animate__animated animate__fadeInUp">
+          Unlock endless possibilities with our cutting-edge AI Web Application.
+        </p>
+        <button className="btn btn-lg btn-warning mt-4 px-5 py-3 fw-bold animate__animated animate__zoomIn"
+          style={{ borderRadius: '50px', transition: '0.3s' }}
+          onMouseOver={(e) => e.target.style.transform = 'scale(1.1)'}
+          onMouseOut={(e) => e.target.style.transform = 'scale(1)'}
+        >
+          Get Started
+        </button>
       </div>
     </section>
   );
 }
 
-export default HeroSection;
+export { HeroSection };

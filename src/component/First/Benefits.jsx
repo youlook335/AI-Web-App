@@ -1,74 +1,83 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheckCircle, faLightbulb, faChartLine, faLock, faRocket, faUsers } from '@fortawesome/free-solid-svg-icons'; // Import icons
+import { faLightbulb, faChartLine, faLock, faRocket, faUsers, faHeadset, faCog, faShieldAlt, faBrain } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 function Benefits() {
   const benefits = [
     {
       icon: faLightbulb,
-      title: "Innovative Solutions",
-      description: "Cutting-edge AI algorithms power our web app, providing innovative solutions to your challenges.",
+      title: "Innovative AI Solutions",
+      description: "Leverage cutting-edge AI algorithms to automate tasks and enhance efficiency.",
+      link: "/benefits/ai-solutions"
     },
     {
       icon: faChartLine,
-      title: "Data-Driven Insights",
-      description: "Gain valuable insights from your data with our advanced analytics and reporting features.",
+      title: "Advanced Analytics",
+      description: "Gain deep insights into your data with our powerful analytics and reporting tools.",
+      link: "/benefits/analytics"
     },
     {
       icon: faLock,
-      title: "Secure and Reliable",
-      description: "Your data is safe with us. We employ robust security measures to protect your information.",
+      title: "Secure & Reliable",
+      description: "We ensure top-tier security and encryption to safeguard your sensitive information.",
+      link: "/benefits/security"
     },
     {
       icon: faRocket,
-      title: "Boost Productivity",
-      description: "Streamline your workflows and increase productivity with our intuitive and efficient web app.",
+      title: "Boost Performance",
+      description: "Enhance productivity and optimize workflows with AI-driven automation.",
+      link: "/benefits/performance"
     },
     {
       icon: faUsers,
-      title: "Collaborative Platform",
-      description: "Connect and collaborate with your team seamlessly on our user-friendly platform.",
+      title: "Seamless Collaboration",
+      description: "Work efficiently with your team through real-time collaboration tools.",
+      link: "/benefits/collaboration"
     },
     {
-      icon: faCheckCircle,
-      title: "Easy to Use",
-      description: "Our web app is designed for simplicity and ease of use, even for non-technical users.",
+      icon: faHeadset,
+      title: "24/7 Customer Support",
+      description: "Get assistance anytime with our dedicated AI and human support team.",
+      link: "/benefits/support"
     },
     {
-      icon: faCheckCircle,
-      title: "24/7 Support",
-      description: "We provide round-the-clock support to assist you with any questions or issues you may encounter.",
+      icon: faCog,
+      title: "Customizable Features",
+      description: "Tailor our platform to fit your business needs with flexible customization options.",
+      link: "/benefits/customization"
     },
     {
-      icon: faCheckCircle,
+      icon: faShieldAlt,
       title: "Scalable Solutions",
-      description: "Our web app can scale to meet the growing needs of your business.",
+      description: "Our technology grows with your business, ensuring seamless scalability.",
+      link: "/benefits/scalability"
     },
     {
-      icon: faCheckCircle,
-      title: "Customizable",
-      description: "Tailor our web app to fit your specific requirements and workflows.",
-    },
+      icon: faBrain,
+      title: "AI-Powered Decision Making",
+      description: "Make smarter business decisions with AI-driven predictive analytics and automation.",
+      link: "/benefits/ai-decision-making"
+    }
   ];
 
   return (
     <section className="benefits py-5 bg-light">
-      <div className="container">
-        <div className="row">
-          <div className="col-md-12 text-center">
-            <h2>Benefits</h2>
-            <p className="lead">Experience the advantages of our cutting-edge AI web app.</p> {/* Added a lead paragraph */}
-          </div>
-        </div>
-        <div className="row">
+      <div className="container text-center">
+        <h2 className="fw-bold text-primary mb-4">Why Choose Us?</h2>
+        <p className="lead text-muted mb-5">Experience the future of AI-powered efficiency and growth.</p>
+        <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
           {benefits.map((benefit, index) => (
-            <div className="col-md-4 col-lg-3 mb-4" key={index}> {/* Responsive columns */}
-              <div className="card h-100"> {/* Card for each benefit */}
-                <div className="card-body text-center">
-                  <FontAwesomeIcon icon={benefit.icon} size="2x" className="mb-3 text-primary" /> {/* Icon */}
-                  <h3 className="card-title">{benefit.title}</h3>
-                  <p className="card-text">{benefit.description}</p>
+            <div className="col d-flex align-items-stretch" key={index}>
+              <div className="card shadow-lg border-0 rounded-4 h-100 p-3 d-flex flex-column">
+                <div className="card-body text-center flex-grow-1">
+                  <FontAwesomeIcon icon={benefit.icon} size="3x" className="mb-3 text-primary" />
+                  <h4 className="fw-bold mb-2 text-dark">{benefit.title}</h4>
+                  <p className="text-muted">{benefit.description}</p>
+                </div>
+                <div className="pb-3 text-center">
+                  <Link to={benefit.link} className="btn btn-primary mt-3">Learn More</Link>
                 </div>
               </div>
             </div>

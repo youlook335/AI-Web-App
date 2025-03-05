@@ -21,7 +21,7 @@ function FAQ() {
   ];
 
   return (
-    <section className="faq py-5" >
+    <section className="faq py-5 bg-light">
       <div className="container" style={{ maxWidth: '1000px' }}>
         <div className="row" >
           <div className="col-md-12 text-center mb-5" >

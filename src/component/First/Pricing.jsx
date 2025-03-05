@@ -72,7 +72,7 @@ export default function PricingSection() {
   ];
 
   return (
-    <div className="container py-5">
+    <div className="container py-5 bg-light">
       <h2 className="text-center fs-1 fw-bold mb-5 text-primary">Pricing Plans</h2>
       <div className="row g-4">
         {plans.map((plan, index) => (
