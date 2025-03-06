@@ -4,8 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function TeamSection() {
   const teamMembers = [
     {
-      name: 'Ali Khan',
-      role: 'AI Engineer',
+      name: 'Unkonown',
+      role: 'Cyber Security Leader',
       img: 'public/Boy (6) fit img in nonw.jpg',
       highlight: false,
     },
@@ -16,8 +16,8 @@ function TeamSection() {
       highlight: true, // Center person (highlighted)
     },
     {
-      name: 'Usman Raza',
-      role: 'Data Scientist',
+      name: 'M-Maroof',
+      role: 'Data Scientist & Backend Developer',
       img: 'public/Boy (6) fit img in nonw.jpg',
       highlight: false,
     }

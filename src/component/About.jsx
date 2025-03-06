@@ -1,9 +1,10 @@
 import React from 'react'
+import Hero from './Mean-about/Hero'
 
 const About = () => {
   return (
     <>
-      <h1>This is a About page in React.jsx</h1>
+    <Hero/>
     </>
   )
 }

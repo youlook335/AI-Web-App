@@ -3,13 +3,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { FaUserCheck, FaChartPie, FaCog } from 'react-icons/fa';
 
 function HeroSection() {
-  const [users, setUsers] = useState(5000);
-  const [tasks, setTasks] = useState(100000);
+  const [users, setUsers] = useState(500);
+  const [tasks, setTasks] = useState(1000);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setUsers((prev) => prev + Math.floor(Math.random() * 10));
-      setTasks((prev) => prev + Math.floor(Math.random() * 100));
+      setUsers((prev) => prev + Math.floor(Math.random() * 5));
+      setTasks((prev) => prev + Math.floor(Math.random() * 20));
     }, 1000);
     return () => clearInterval(interval);
   }, []);
