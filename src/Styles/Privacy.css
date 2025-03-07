@@ -1,0 +1,78 @@
+/* General Styles */
+.privacy-card {
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.privacy-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007bff;
+    text-transform: uppercase;
+}
+
+.privacy-icon {
+    color: #007bff;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+h4 {
+    cursor: pointer;
+    padding: 10px;
+    background: rgba(0, 123, 255, 0.1);
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+}
+
+h4:hover {
+    background: rgba(0, 123, 255, 0.2);
+    transform: scale(1.02);
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background: #1e1e1e;
+    color: #ffffff;
+}
+
+.light-mode {
+    background: #f8f9fa;
+    color: #333;
+}
+
+.dark-mode .privacy-card {
+    background: #2a2a2a;
+    color: white;
+}
+
+.dark-mode h4 {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode h4:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Toggle Mode Button */
+.toggle-mode {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.toggle-mode:hover {
+    transform: scale(1.1);
+}
+
+/* Collapse Animation */
+.collapse {
+    transition: height 0.3s ease-in-out;
+}
