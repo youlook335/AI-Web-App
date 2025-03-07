@@ -1,0 +1,116 @@
+.about-container {
+    max-width: 1200px;
+}
+
+.heading {
+    font-size: 2.5rem;
+    color: #0d6efd;
+}
+
+.subheading {
+    font-size: 1.2rem;
+}
+
+.info-box {
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+    background: #e9ecef;
+}
+
+.section-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #343a40;
+}
+
+.feature-card,
+.why-choose-card {
+    border: none;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 20px;
+}
+
+.feature-card:hover,
+.why-choose-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon,
+.why-choose-icon {
+    font-size: 3rem;
+    color: #0d6efd;
+    margin-bottom: 15px;
+}
+
+.feature-title,
+.why-choose-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.feature-text,
+.why-choose-text {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+.team-card {
+    border: none;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.team-img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin: 15px auto;
+}
+
+.team-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.team-role {
+    font-size: 1.1rem;
+    color: #6c757d;
+}
+
+.team-expertise {
+    font-size: 0.95rem;
+    color: #495057;
+}
+
+.cta-button {
+    font-size: 1.2rem;
+    padding: 12px 25px;
+    border-radius: 30px;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.cta-button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
