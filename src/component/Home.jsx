@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import HeroSection from "./First/HeroSection";
-import Features from "./First/Features";
+import Features from "./First/Featureshome";
 import Benefits from "./First/Benefits";
 import Pricing from "./First/Pricing";
 import FAQ from "./First/FAQ";
@@ -11,13 +11,13 @@ import TeamSection from "./First/TeamSection";
 const Home = () => {
     return (
         <>
-        <HeroSection/>
-        <Features/>
-        <TeamSection/>
-        <Benefits/>
-        <Pricing/>
-        <Testimonials/>
-        <FAQ/>
+            <HeroSection />
+            <Features />
+            <TeamSection />
+            <Benefits />
+            <Pricing />
+            <Testimonials />
+            <FAQ />
         </>
     );
 };

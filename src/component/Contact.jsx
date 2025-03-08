@@ -141,7 +141,7 @@ export default function ContactUs() {
                             </div>
                         </div>
 
-                        <div className="p-4 bg-light shadow-sm rounded-3">
+                            <div className="p-4 bg-light shadow-sm rounded-3">
                             <h5 className="text-dark fw-bold fs-3 pb-3 text-center"> Contact Information</h5>
                             <p>
                                 <FaPhone className="text-primary" /> <strong>Phone:</strong> +123 456 7890
