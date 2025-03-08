@@ -31,7 +31,6 @@ function HeroSection() {
           <a href="/" className="btn btn-lg btn-warning px-5 py-2 fw-bold">Start Exploring</a>
         </div>
 
-        {/* Stats Section */}
         <div className="row text-center mt-5">
           <div className="col-md-4">
             <FaUserCheck size={50} className="text-success mb-2" />

@@ -57,7 +57,6 @@ const Navbar = () => {
                   Home
                 </Link>
               </li>
-              {/* Drop down Menu */}
               <li className="nav-item dropdown" onMouseEnter={() => setDropdownOpen(true)} onMouseLeave={() => setDropdownOpen(false)}>
                 <Link className="nav-link text-dark hover-underline" to="#">
                   Drop Menu <FaChevronDown className="ms-1"/>
@@ -84,7 +83,6 @@ const Navbar = () => {
               </li>
             </ul>
 
-            {/* Search Bar - Hide on Small Screens */}
             <form className="d-none d-lg-flex ms-3">
               <input
                 ref={searchInputRef}
@@ -95,7 +93,6 @@ const Navbar = () => {
               />
             </form>
 
-            {/* Login & Signup Buttons */}
             <div className="d-flex gap-2 ms-3">
               <Link to="/login" className="btn btn-outline-primary">Login</Link>
               <Link to="/signup" className="btn btn-primary">Signup</Link>
@@ -104,7 +101,6 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Fullscreen Search Modal */}
       {searchActive && (
         <div className="search-overlay" onClick={() => setSearchActive(false)}>
           <div className="search-box" onClick={(e) => e.stopPropagation()}>

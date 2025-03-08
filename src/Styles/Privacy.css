@@ -1,4 +1,4 @@
-/* General Styles */
+/* General Styles  
 .privacy-card {
     padding: 30px;
     border-radius: 12px;
@@ -32,7 +32,7 @@ h4:hover {
     transform: scale(1.02);
 }
 
-/* Dark Mode Styles */
+/* Dark Mode Styles  
 .dark-mode {
     background: #1e1e1e;
     color: #ffffff;
@@ -56,7 +56,6 @@ h4:hover {
     background: rgba(255, 255, 255, 0.2);
 }
 
-/* Toggle Mode Button */
 .toggle-mode {
     position: absolute;
     top: 20px;
@@ -72,7 +71,6 @@ h4:hover {
     transform: scale(1.1);
 }
 
-/* Collapse Animation */
 .collapse {
     transition: height 0.3s ease-in-out;
 }

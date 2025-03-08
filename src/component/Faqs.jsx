@@ -63,7 +63,6 @@ function Faqs() {
         <>
             <div className="bg-light">
                 <Container className="py-5 bg-light">
-                    {/* AI Features Section */}
                     <h2 className="text-center mb-4 fw-bold text-dark">AI-Powered Features</h2>
                     <Row className="mb-4 text-center">
                         <Col md={4}>
@@ -164,5 +163,4 @@ function Faqs() {
         </>
     );
 }
-
 export default Faqs;

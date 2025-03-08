@@ -28,7 +28,6 @@ export default function ContactUs() {
         <>
             <div className="container-fluid py-5 bg-light">
                 <div className="row">
-                    {/* Left Side: Contact Form */}
                     <div className="col-md-6">
                         <div className="p-4 bg-light rounded-3 show-lg" style={{borderRadius: "12px"}}>
                             <h2 className="text-center mb-4 text-primary">Contact Us – Let’s Talk</h2>
@@ -125,9 +124,7 @@ export default function ContactUs() {
                         </div>
                     </div>
 
-                    {/* Right Side: About + Contact Info */}
                     <div className="col-md-6">
-                        {/* About Section */}
                         <div className="p-4 bg-light shadow-sm rounded-3 mb-4">
                             <h4 className="text-dark text-center">About Our AI Services</h4>
                             <p className="text-muted text-center">
@@ -144,7 +141,6 @@ export default function ContactUs() {
                             </div>
                         </div>
 
-                        {/* Contact Information */}
                         <div className="p-4 bg-light shadow-sm rounded-3">
                             <h5 className="text-dark fw-bold fs-3 pb-3 text-center"> Contact Information</h5>
                             <p>
