@@ -9,7 +9,7 @@ const Ourabout = () => {
     <>
        <Row className="mt-4">
                 <Col>
-                    <h2 className="section-heading">What We Offer</h2>
+                    <h2 className="section-heading mt-3">What We Offer</h2>
                 </Col>
             </Row>
             <Row>

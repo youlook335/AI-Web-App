@@ -103,13 +103,13 @@ const Blog = () => {
                     <Card className="shadow-sm p-3 border-0">
                         <Card.Body>
                             <Card.Title>
-                                <FaDatabase className="text-success me-2" /> Machine Learning Tutorials
+                                <FaCogs className="text-info me-2" /> AI Development Tools
                             </Card.Title>
                             <Card.Text>
-                                Learn the fundamentals of machine learning and data science from top platforms like
-                                Coursera and Udemy.
+                                Access powerful AI tools like TensorFlow, PyTorch, and OpenAI API for building
+                                intelligent applications.
                             </Card.Text>
-                            <Button variant="outline-success" href="https://www.coursera.org/" target="_blank">
+                            <Button variant="outline-info" href="https://www.tensorflow.org/" target="_blank">
                                 Explore
                             </Button>
                         </Card.Body>
@@ -119,13 +119,13 @@ const Blog = () => {
                     <Card className="shadow-sm p-3 border-0">
                         <Card.Body>
                             <Card.Title>
-                                <FaCogs className="text-info me-2" /> AI Development Tools
+                                <FaDatabase className="text-success me-2" /> Machine Learning Tutorials
                             </Card.Title>
                             <Card.Text>
-                                Access powerful AI tools like TensorFlow, PyTorch, and OpenAI API for building
-                                intelligent applications.
+                                Learn the fundamentals of machine learning and data science from top platforms like
+                                Coursera and Udemy.
                             </Card.Text>
-                            <Button variant="outline-info" href="https://www.tensorflow.org/" target="_blank">
+                            <Button variant="outline-success" href="https://www.coursera.org/" target="_blank">
                                 Explore
                             </Button>
                         </Card.Body>

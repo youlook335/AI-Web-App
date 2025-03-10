@@ -1,11 +1,16 @@
-import React from 'react'
+import React from "react";
+import Support from "./Help/Support";
+import Help_1 from "./Help/Help_1";
+import Subscription from "./Help/Subscription";
 
 const Help = () => {
   return (
     <>
-      <h1>This is a Help Page in React</h1>
+    <Support/>
+    <Subscription/>
+    <Help_1/>
     </>
-  )
-}
+  );
+};
 
-export default Help
+export default Help;

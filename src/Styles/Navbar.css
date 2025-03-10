@@ -11,7 +11,7 @@
     width: 100%;
     z-index: 1000;
     background: rgba(255, 255, 255, 0.95);
-    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);  
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);  
     padding: 15px 0;
 }
 .nav-link {
@@ -75,7 +75,6 @@
     }
 }
 
-/* Navbar Links Hover Effect  
 .nav-link {
     position: relative;
     text-decoration: none;

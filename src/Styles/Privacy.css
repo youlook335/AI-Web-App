@@ -1,8 +1,8 @@
 .privacy-card {
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-in-out;
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); */
+    /* transition: all 0.3s ease-in-out; */
 }
 
 .privacy-title {
@@ -21,7 +21,6 @@
 h4 {
     cursor: pointer;
     padding: 10px;
-    background: rgba(0, 123, 255, 0.1);
     border-radius: 8px;
     transition: 0.3s ease-in-out;
 }
@@ -31,7 +30,6 @@ h4:hover {
     transform: scale(1.02);
 }
 
-/* Dark Mode Styles  
 .dark-mode {
     background: #1e1e1e;
     color: #ffffff;

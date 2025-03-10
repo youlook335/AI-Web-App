@@ -68,7 +68,7 @@ const Navbar = () => {
                                 {dropdownOpen && (
                                     <ul className="dropdown-menu show">
                                         <li>
-                                            <Link className="dropdown-item" to="/about">
+                                            <Link className="dropdown-item" to="/About">
                                                 About
                                             </Link>
                                         </li>
@@ -88,12 +88,12 @@ const Navbar = () => {
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link className="dropdown-item" to="/services">
+                                            <Link className="dropdown-item" to="/Services">
                                                 Services
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link className="dropdown-item" to="/Feature">
+                                            <Link className="dropdown-item" to="/Features">
                                                 Feature
                                             </Link>
                                         </li>
