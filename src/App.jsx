@@ -1,6 +1,6 @@
 import "./App.css";
 import React from "react";
-import {Routes, Route, BrowserRouter} from "react-router-dom";
+import {Routes, Route} from "react-router-dom";
 import Home from "./component/Home";
 import Projects from "./component/Projects";
 import Services from "./component/Services";
@@ -24,7 +24,7 @@ function App() {
                 <Route path="/Blog" element={<Blog />} />
                 <Route path="/Privacy" element={<Privacy />} />
                 <Route path="/Contact" element={<Contact />} />
-                <Route path="/Feature" element={<Feature />} />
+                <Route path="/Features" element={<Feature />} />
                 <Route path="/Faqs" element={<Faqs />} />
                 <Route path="/Help" element={<Help />} />
             </Routes>

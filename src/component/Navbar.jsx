@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useRef} from "react";
 import {Link} from "react-router-dom";
 import "../Styles/Navbar.css";
-import {FaSearch, FaBars, FaTimes, FaChevronDown} from "react-icons/fa";
+import {FaBars, FaTimes, FaChevronDown} from "react-icons/fa";
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
