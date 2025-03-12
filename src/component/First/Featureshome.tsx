@@ -2,7 +2,7 @@ import React from "react";
 import { FaComments, FaLanguage, FaChartLine, FaMicrophone, FaCloud, FaUserShield } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const Features: React.FC = () => {
+const Featureshome: React.FC = () => {
     return (
         <section className="features py-5 bg-light">
             <div className="container">
@@ -61,4 +61,4 @@ const Features: React.FC = () => {
     );
 };
 
-export default Features;
+export default Featureshome;
