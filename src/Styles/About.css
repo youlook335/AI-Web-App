@@ -75,11 +75,6 @@
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.team-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
-
 .team-img {
     border-radius: 50%;
     width: 120px;
@@ -107,5 +102,4 @@
     font-size: 1.2rem;
     padding: 12px 25px;
     border-radius: 30px;
-    transition: background 0.3s ease-in-out;
 }

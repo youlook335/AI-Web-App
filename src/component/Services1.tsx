@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faRobot,
@@ -114,12 +116,23 @@ const services: Service[] = [
 ];
 
 const Services1: React.FC = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000, // اینیمیشن کا دورانیہ
+            once: true, // ایک بار اینیمیشن چلے گی
+        });
+    }, []);
+
     return (
         <div className="container bg-light">
             <div className="row">
                 {services.map((service, index) => (
-                    <div className="col-md-4 mb-4" key={index}>
-                        <div className="card shadow-sm">
+                    <div
+                        className="col-md-4 mb-4"
+                        key={index}
+                        data-aos={index % 2 === 0 ? "fade-up" : "fade-down"} // alternating animations
+                    >
+                        <div className="card shadow-sm" data-aos="zoom-in">
                             <div className="card-body text-center">
                                 <FontAwesomeIcon icon={service.icon} size="3x" className="mb-3 privacy-icon" />
                                 <h5 className="card-title">{service.title}</h5>

@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { Card } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -16,7 +18,10 @@ interface PricingCardProps {
 // Pricing Card Component
 const PricingCard: React.FC<PricingCardProps> = ({ title, price, features, buttonText, description }) => {
   return (
-    <Card className="text-dark bg-light shadow-lg rounded-4 p-4 text-center border border-primary">
+    <Card 
+      className="text-dark bg-light shadow-lg rounded-4 p-4 text-center border border-primary"
+      data-aos="flip-left"
+    >
       <Card.Header className="fs-4 fw-bold text-primary">{title}</Card.Header>
       <Card.Body>
         <h2 className="fw-bold mb-3 text-dark">{price}</h2>
@@ -47,6 +52,13 @@ interface PricingPlan {
 
 // Pricing Section Component
 const PricingSection: React.FC = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // اینیمیشن کا دورانیہ
+      once: true, // صرف ایک بار اینیمیشن چلے گی
+    });
+  }, []);
+
   const plans: PricingPlan[] = [
     {
       title: "Basic Plan",
@@ -94,7 +106,7 @@ const PricingSection: React.FC = () => {
   ];
 
   return (
-    <div className="container py-5 bg-light">
+    <div className="container py-5 bg-light" data-aos="fade-up">
       <h2 className="text-center fs-1 fw-bold mb-5 text-primary">Pricing Plans</h2>
       <div className="row g-4">
         {plans.map((plan, index) => (
@@ -103,7 +115,7 @@ const PricingSection: React.FC = () => {
           </div>
         ))}
       </div>
-      <div className="text-center mt-5">
+      <div className="text-center mt-5" data-aos="zoom-in">
         <Link to="/Price">
           <Button variant="outline-primary" className="rounded-pill px-4 py-2">
             Your Own Offer

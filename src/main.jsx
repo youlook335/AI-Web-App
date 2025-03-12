@@ -19,6 +19,6 @@ createRoot(document.getElementById("root")).render(
         {/* <ChatButton /> */}
         <Footer />
         {/* <Translater/> */}
-        {/* <WhatsAppButton/> */}
+        <WhatsAppButton/>
     </BrowserRouter>
 );

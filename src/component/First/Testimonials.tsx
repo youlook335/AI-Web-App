@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { FaStar, FaStarHalfAlt } from 'react-icons/fa';
 
 interface Testimonial {
@@ -9,6 +11,10 @@ interface Testimonial {
 }
 
 const Testimonials: React.FC = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   const aiTestimonials: Testimonial[] = [
     {
       name: "OpenAI",
@@ -66,12 +72,16 @@ const Testimonials: React.FC = () => {
   return (
     <section className="testimonials py-5 bg-light text-center">
       <div className="container">
-        <h2 className="display-4 text-primary fw-bold">AI Companies' Testimonials</h2>
-        <p className="lead mb-4">Trusted by the world's leading AI companies</p>
+        <h2 className="display-4 text-primary fw-bold" data-aos="fade-down">
+          AI Companies' Testimonials
+        </h2>
+        <p className="lead mb-4" data-aos="fade-up">
+          Trusted by the world's leading AI companies
+        </p>
 
         <div className="row">
           {aiTestimonials.map((testimonial, index) => (
-            <div key={index} className="col-md-4 mb-4">
+            <div key={index} className="col-md-4 mb-4" data-aos="zoom-in">
               <div className="card shadow-sm p-4 border-0">
                 <img 
                   src={testimonial.img} 

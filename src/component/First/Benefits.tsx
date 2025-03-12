@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -23,6 +25,10 @@ interface BenefitItem {
 }
 
 const Benefits: React.FC = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   const benefits: BenefitItem[] = [
     {
       icon: faLightbulb,
@@ -82,12 +88,12 @@ const Benefits: React.FC = () => {
 
   return (
     <section className="benefits py-5 bg-light">
-      <div className="container text-center">
+      <div className="container text-center" data-aos="fade-up">
         <h2 className="fw-bold text-primary mb-4">Why Choose Us?</h2>
         <p className="lead text-muted mb-5">Experience the future of AI-powered efficiency and growth.</p>
         <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
           {benefits.map((benefit, index) => (
-            <div className="col d-flex align-items-stretch" key={index}>
+            <div className="col d-flex align-items-stretch" key={index} data-aos="zoom-in" data-aos-delay={index * 100}>
               <div className="card shadow-lg border-0 rounded-4 h-100 p-3 d-flex flex-column">
                 <div className="card-body text-center flex-grow-1">
                   <FontAwesomeIcon icon={benefit.icon} size="3x" className="mb-3 text-primary" />

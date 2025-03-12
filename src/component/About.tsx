@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { Container, Button } from "react-bootstrap";
 import "../Styles/About.css";
 import Hero from "./Mean-about/Hero";
@@ -10,24 +12,43 @@ import AIFeatures from "./Mean-about/AIFeatures";
 import AIFeatures1 from "./Mean-about/AIFeatures1";
 
 const AboutUs: React.FC = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000, // اینیمیشن کا دورانیہ
+            once: true, // صرف ایک بار اینیمیشن چلے گی
+        });
+    }, []);
+
     return (
         <>
             <div className="bg-light">
                 <Container className="about-container bg-light">
                     <div className="container-fluid py-5 bg-light">
-                        <Hero />
-                        <Ourabout />
-                        <TeamSection />
-                        <Benefits />
+                        <div data-aos="fade-down">
+                            <Hero />
+                        </div>
+                        <div data-aos="fade-up">
+                            <Ourabout />
+                        </div>
+                        <div data-aos="fade-right">
+                            <TeamSection />
+                        </div>
+                        <div data-aos="fade-left">
+                            <Benefits />
+                        </div>
                     </div>
-                    <div className="text-center">
+                    <div className="text-center" data-aos="zoom-in">
                         <Button variant="primary" className="text-center cta-primary" href="mailto:youloos477@gmail.com">
                             Contact Us
                         </Button>
                     </div>
-                    <AIFeatures1 />
-                    <AIFeatures />
-                    <div className="mt-5">
+                    <div data-aos="fade-up">
+                        <AIFeatures1 />
+                    </div>
+                    <div data-aos="fade-up">
+                        <AIFeatures />
+                    </div>
+                    <div className="mt-5" data-aos="zoom-in">
                         <AIPromoPage />
                     </div>
                 </Container>

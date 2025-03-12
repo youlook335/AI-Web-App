@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { FaPlus, FaMinus } from "react-icons/fa";
 
 // Define Type for FAQ Item
@@ -9,6 +11,10 @@ interface FAQItem {
 
 const FAQ: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
 
   const toggleAnswer = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -51,7 +57,7 @@ const FAQ: React.FC = () => {
 
   return (
     <section className="faq py-5 bg-light">
-      <div className="container" style={{ maxWidth: "1000px" }}>
+      <div className="container" style={{ maxWidth: "1000px" }} data-aos="fade-up">
         <div className="row">
           <div className="col-md-12 text-center mb-5">
             <h2 className="fw-bold text-dark">Frequently Asked Questions</h2>
@@ -65,6 +71,8 @@ const FAQ: React.FC = () => {
                 key={index}
                 className="card mb-4 border-0 shadow-lg rounded-3"
                 style={{ overflow: "hidden" }}
+                data-aos="fade-right"
+                data-aos-delay={index * 100}
               >
                 <div
                   className="card-header d-flex justify-content-between align-items-center bg-white p-4"
@@ -79,7 +87,11 @@ const FAQ: React.FC = () => {
                   )}
                 </div>
                 {openIndex === index && (
-                  <div className="card-body bg-light p-4" style={{ fontSize: "16px", color: "#495057" }}>
+                  <div
+                    className="card-body bg-light p-4"
+                    style={{ fontSize: "16px", color: "#495057" }}
+                    data-aos="fade-in"
+                  >
                     {faq.answer}
                   </div>
                 )}

@@ -1,9 +1,15 @@
-import {useState} from "react";
-import {FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaPhone, FaEnvelope, FaGlobe} from "react-icons/fa";
+import { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaPhone, FaEnvelope, FaGlobe } from "react-icons/fa";
 import "../Styles/Contact.css";
 import Map from "./Map";
 
 export default function ContactUs() {
+    useEffect(() => {
+        AOS.init({ duration: 1000, once: true });
+    }, []);
+
     const [formData, setFormData] = useState({
         company: "",
         firstName: "",
@@ -14,21 +20,22 @@ export default function ContactUs() {
     });
 
     const handleChange = (e) => {
-        setFormData({...formData, [e.target.name]: e.target.value});
+        setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
         alert("Your message has been sent!");
-        setFormData({company: "", firstName: "", lastName: "", phone: "", email: "", message: ""});
+        setFormData({ company: "", firstName: "", lastName: "", phone: "", email: "", message: "" });
     };
 
     return (
         <>
             <div className="container-fluid py-5 bg-light">
                 <div className="row">
+                    {/* Contact Form */}
                     <div className="col-md-6">
-                        <div className="p-4 bg-light rounded-3 show-lg" style={{borderRadius: "12px"}}>
+                        <div className="p-4 bg-light rounded-3 shadow-lg" style={{ borderRadius: "12px" }} data-aos="fade-right">
                             <h2 className="text-center mb-4 text-primary">Contact Us – Let’s Talk</h2>
                             <form className="p-4 bg-light shadow-sm rounded-3" onSubmit={handleSubmit}>
                                 <div className="row mb-3">
@@ -99,7 +106,7 @@ export default function ContactUs() {
                                         required
                                     />
                                 </div>
-                                <button type="submit" className="btn btn-primary rounded-3 shadow-sm ">
+                                <button type="submit" className="btn btn-primary rounded-3 shadow-sm">
                                     Send Message
                                 </button>
                                 <div>
@@ -123,8 +130,9 @@ export default function ContactUs() {
                         </div>
                     </div>
 
+                    {/* About AI Services & Contact Info */}
                     <div className="col-md-6">
-                        <div className="p-4 bg-light shadow-sm rounded-3 mb-4">
+                        <div className="p-4 bg-light shadow-sm rounded-3 mb-4" data-aos="fade-left">
                             <h4 className="text-dark text-center">About Our AI Services</h4>
                             <p className="text-muted text-center">
                                 We specialize in AI-powered solutions that transform businesses. From chatbots to
@@ -140,7 +148,8 @@ export default function ContactUs() {
                             </div>
                         </div>
 
-                            <div className="p-4 bg-light shadow-sm rounded-3">
+                        {/* Contact Information */}
+                        <div className="p-4 bg-light shadow-sm rounded-3" data-aos="fade-up">
                             <h5 className="text-dark fw-bold fs-3 pb-3 text-center"> Contact Information</h5>
                             <p>
                                 <FaPhone className="text-primary" /> <strong>Phone:</strong> +123 456 7890
@@ -168,7 +177,11 @@ export default function ContactUs() {
                         </div>
                     </div>
                 </div>
-                <Map />
+
+                {/* Map Section */}
+                <div data-aos="zoom-in">
+                    <Map />
+                </div>
             </div>
         </>
     );

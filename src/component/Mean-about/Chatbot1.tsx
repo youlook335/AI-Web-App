@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FaRobot, FaShoppingCart, FaShieldAlt, FaPalette } from "react-icons/fa";
 
 const BlogPage: React.FC = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
     <div className="container mt-5">
-      <h1 className="text-center text-primary fs-1 mb-4">AI & Technology Blog</h1>
+      <h1 className="text-center text-primary fs-1 mb-4" data-aos="fade-down">AI & Technology Blog</h1>
       <div className="row">
+        
         {/** AI Trends Section */}
-        <div className="col-md-6 mb-4">
+        <div className="col-md-6 mb-4" data-aos="fade-right">
           <div className="card h-100">
             <div className="card-header bg-primary text-white">
               <FaRobot className="me-2" /> Latest Trends in AI
@@ -28,7 +35,7 @@ const BlogPage: React.FC = () => {
         </div>
 
         {/** AI in E-commerce */}
-        <div className="col-md-6 mb-4">
+        <div className="col-md-6 mb-4" data-aos="fade-left">
           <div className="card h-100">
             <div className="card-header bg-success text-white">
               <FaShoppingCart className="me-2" /> AI in E-commerce
@@ -48,7 +55,7 @@ const BlogPage: React.FC = () => {
         </div>
 
         {/** AI in Fraud Detection */}
-        <div className="col-md-6 mb-4">
+        <div className="col-md-6 mb-4" data-aos="fade-right">
           <div className="card h-100">
             <div className="card-header bg-danger text-white">
               <FaShieldAlt className="me-2" /> Fraud Detection with AI
@@ -68,7 +75,7 @@ const BlogPage: React.FC = () => {
         </div>
 
         {/** AI in Creative Fields */}
-        <div className="col-md-6 mb-4">
+        <div className="col-md-6 mb-4" data-aos="fade-left">
           <div className="card h-100">
             <div className="card-header bg-warning text-white">
               <FaPalette className="me-2" /> AI in Creative Fields
@@ -86,6 +93,7 @@ const BlogPage: React.FC = () => {
             </div>
           </div>
         </div>
+
       </div>
     </div>
   );

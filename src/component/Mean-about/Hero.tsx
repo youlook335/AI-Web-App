@@ -1,20 +1,33 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { Container, Row, Col } from "react-bootstrap";
 import { FaGlobe, FaBullseye, FaRobot, FaLightbulb } from "react-icons/fa";
 import "../../Styles/Hero.css";
 
 const Hero: React.FC = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // اینیمیشن کا دورانیہ
+      once: true, // صرف ایک بار اینیمیشن چلے گی
+    });
+  }, []);
+
   return (
     <>
       <Row className="text-center mb-4">
         <Col>
-          <h1 className="fw-bold heading">Our AI Web App</h1>
-          <p className="text-muted subheading">Welcome to the Future of AI!</p>
+          <h1 className="fw-bold heading" data-aos="fade-down">
+            Our AI Web App
+          </h1>
+          <p className="text-muted subheading" data-aos="fade-up">
+            Welcome to the Future of AI!
+          </p>
         </Col>
       </Row>
 
       <Row>
-        <Col md={6} className="info-box">
+        <Col md={6} className="info-box" data-aos="fade-right">
           <div className="icon-container">
             <FaGlobe className="icon-large" />
           </div>
@@ -25,7 +38,7 @@ const Hero: React.FC = () => {
             and enhance decision-making capabilities for enterprises of all sizes.
           </p>
         </Col>
-        <Col md={6} className="info-box">
+        <Col md={6} className="info-box" data-aos="fade-left">
           <div className="icon-container">
             <FaBullseye className="icon-large" />
           </div>
@@ -39,7 +52,7 @@ const Hero: React.FC = () => {
       </Row>
 
       <Row className="mt-4">
-        <Col md={6} className="info-box">
+        <Col md={6} className="info-box" data-aos="zoom-in">
           <div className="icon-container">
             <FaLightbulb className="icon-large" />
           </div>
@@ -49,7 +62,7 @@ const Hero: React.FC = () => {
             machine learning and deep learning techniques to create smarter, more intuitive AI-driven solutions.
           </p>
         </Col>
-        <Col md={6} className="info-box">
+        <Col md={6} className="info-box" data-aos="zoom-in">
           <div className="icon-container">
             <FaRobot className="icon-large" />
           </div>

@@ -1,5 +1,7 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, {useEffect} from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {
     faRobot,
     faBrain,
@@ -22,6 +24,10 @@ interface Service {
 }
 
 const Services: React.FC = () => {
+    useEffect(() => {
+        AOS.init({duration: 1000, once: true});
+    }, []);
+
     const services: Service[] = [
         {
             icon: faRobot,
@@ -122,16 +128,18 @@ const Services: React.FC = () => {
     return (
         <div className="bg-light mt-2">
             <div className="container bg-light">
-                <h1 className="my-5 text-center">AI Services - The Future of Advanced Technology</h1>
+                <h1 className="my-5 text-center" data-aos="fade-down">
+                    AI Services - The Future of Advanced Technology
+                </h1>
                 <div className="row">
                     {services.map((service, index) => (
-                        <div className="col-md-4" key={index}>
-                            <div className="card mb-4">
+                        <div className="col-md-4" key={index} data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}>
+                            <div className="card mb-4 shadow-lg">
                                 <div className="card-body privacy-icon text-center">
-                                    <FontAwesomeIcon icon={service.icon} size="3x" className="mb-3" />
+                                    <FontAwesomeIcon icon={service.icon} size="3x" className="mb-3 text-primary" />
                                     <h5 className="card-title">{service.title}</h5>
                                     <p className="card-text">{service.description}</p>
-                                    <ul>
+                                    <ul className="text-start">
                                         {service.features.map((feature, idx) => (
                                             <li key={idx}>{feature}</li>
                                         ))}

@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { Container, Button, Card } from "react-bootstrap";
 import { 
   FaUserPlus, FaUnlockAlt, FaUserCircle, FaRobot, FaPenFancy, FaImage, 
@@ -8,17 +10,21 @@ import {
 import "../../Styles/Support.css";
 
 const Support: React.FC = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
     <Container className="mt-5 text-center">
-      <h1 className="mb-4">
+      <h1 className="mb-4" data-aos="fade-down">
         <FaInfoCircle className="me-2 text-primary" /> Help & Support - AI Web App
       </h1>
-      <p>
+      <p data-aos="fade-up">
         Welcome to the AI Web App Help Center! Our AI web application provides cutting-edge <strong>Artificial Intelligence services</strong>. 
         If you encounter any issues, this guide will assist you.
       </p>
       
-      <Card className="p-4 shadow-lg mb-4 text-start">
+      <Card className="p-4 shadow-lg mb-4 text-start" data-aos="fade-right">
         <h2 className="mb-3">
           <FaGem className="text-info me-2" /> About Our AI Web App
         </h2>
@@ -31,7 +37,7 @@ const Support: React.FC = () => {
         </p>
       </Card>
 
-      <Card className="p-4 shadow-lg mb-4 text-start">
+      <Card className="p-4 shadow-lg mb-4 text-start" data-aos="fade-left">
         <h2 className="mb-3">
           <FaRocket className="text-danger me-2" /> Getting Started - How to Use the AI Web App?
         </h2>
@@ -60,29 +66,29 @@ const Support: React.FC = () => {
         </Button>
       </Card>
 
-      <h2 className="mt-5">
+      <h2 className="mt-5" data-aos="zoom-in">
         <FaRobot className="text-primary me-2" /> AI Features & Tools
       </h2>
       
-      <Card className="p-4 shadow-lg text-start">
+      <Card className="p-4 shadow-lg text-start" data-aos="fade-up">
         <ul className="list-unstyled">
-          <li className="mb-3">
+          <li className="mb-3" data-aos="fade-up">
             <FaRobot className="text-primary me-2" /> <strong><a href="#ai-chatbot-guide">AI Chatbot</a></strong> – Provides instant responses to your queries.
           </li>
-          <li className="mb-3">
+          <li className="mb-3" data-aos="fade-up">
             <FaPenFancy className="text-success me-2" /> <strong><a href="#content-generator-guide">AI Content Generator</a></strong> – Assists in writing blogs, social media posts, and articles.
           </li>
-          <li className="mb-3">
+          <li className="mb-3" data-aos="fade-up">
             <FaImage className="text-danger me-2" /> <strong><a href="#image-recognition-guide">AI Image Recognition</a></strong> – Analyzes uploaded images.
           </li>
-          <li className="mb-3">
+          <li className="mb-3" data-aos="fade-up">
             <FaMicrophone className="text-warning me-2" /> <strong><a href="#voice-to-text-guide">Voice-to-Text</a></strong> – Converts voice input into text.
           </li>
-          <li className="mb-3">
+          <li className="mb-3" data-aos="fade-up">
             <FaChartBar className="text-info me-2" /> <strong><a href="#data-analysis-guide">AI Data Analysis</a></strong> – Extracts insights from your data.
           </li>
         </ul>
-        <p className="text-center mt-3">
+        <p className="text-center mt-3" data-aos="zoom-in">
           <FaArrowRight className="text-warning me-2" /> <strong>Click on each feature to learn more!</strong>
         </p>
       </Card>
