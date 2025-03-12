@@ -1,8 +1,8 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import {FaCheckCircle, FaChartLine, FaRobot, FaCog, FaRocket} from "react-icons/fa";
+import { FaCheckCircle, FaChartLine, FaRobot, FaCog, FaRocket } from "react-icons/fa";
 
-const AIContentPage = () => {
+const AIContentPage: React.FC = () => {
     return (
         <div className="container mt-5">
             <div className="text-center">
@@ -26,12 +26,10 @@ const AIContentPage = () => {
                         keyword analysis for better targeting
                     </li>
                     <li className="list-group-item border-0">
-                        <FaCheckCircle className="text-success me-2" /> <strong>On-Page Optimization</strong> –
-                        AI-enhanced meta descriptions, headings, and URLs
+                        <FaCheckCircle className="text-success me-2" /> <strong>On-Page Optimization</strong> – AI-enhanced meta descriptions, headings, and URLs
                     </li>
                     <li className="list-group-item border-0">
-                        <FaCheckCircle className="text-success me-2" /> <strong>Readability & Engagement</strong> – AI
-                        refines content for clarity and user retention
+                        <FaCheckCircle className="text-success me-2" /> <strong>Readability & Engagement</strong> – AI refines content for clarity and user retention
                     </li>
                     <li className="list-group-item border-0">
                         <FaCheckCircle className="text-success me-2" /> <strong>Plagiarism-Free</strong> – Ensures 100%
@@ -44,16 +42,14 @@ const AIContentPage = () => {
                 <h3 className="text-success mb-3"> Benefits of AI-Optimized Content:</h3>
                 <ul className="list-group list-group-flush">
                     <li className="list-group-item border-0">
-                        <FaChartLine className="text-primary me-2" /> Increased website traffic and higher search
-                        rankings
+                        <FaChartLine className="text-primary me-2" /> Increased website traffic and higher search rankings
                     </li>
                     <li className="list-group-item border-0">
                         <FaCheckCircle className="text-primary me-2" /> AI-optimized content tailored for search engines
                         and readers
                     </li>
                     <li className="list-group-item border-0">
-                        <FaCheckCircle className="text-primary me-2" /> Establishes brand authority with high-quality
-                        content
+                        <FaCheckCircle className="text-primary me-2" /> Establishes brand authority with high-quality content
                     </li>
                 </ul>
             </div>

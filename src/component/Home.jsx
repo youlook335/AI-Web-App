@@ -1,11 +1,11 @@
 import React, {useState} from "react";
-import HeroSection from "./First/HeroSection";
 import Features from "./First/Featureshome";
 import Benefits from "./First/Benefits";
 import Pricing from "./First/Pricing";
-import FAQ from "./First/FAQ";
-import Testimonials from "./First/Testimonials";
 import TeamSection from "./First/TeamSection";
+import HeroSection from "./First/HeroSection";
+import Testimonial from "./First/Testimonials"
+import FaQ from "./First/FaQ";
 // import "../Styles/Home.css";
 
 const Home = () => {
@@ -16,8 +16,8 @@ const Home = () => {
             <TeamSection />
             <Benefits />
             <Pricing />
-            <Testimonials />
-            <FAQ />
+            <Testimonial />
+            <FaQ />
         </>
     );
 };

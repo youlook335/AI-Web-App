@@ -11,8 +11,8 @@ import Help from "./component/Help";
 import Blog from "./component/Blog";
 import Privacy from "./component/Privacy";
 import Feature from "./component/Feature";
-import PricingSection from "../src/component/First/Pricing";
 import Price from "./component/Price";
+import PricingSection from "./component/First/Pricing";
 
 function App() {
     return (

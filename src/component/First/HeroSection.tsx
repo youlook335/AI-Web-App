@@ -1,9 +1,9 @@
-import React, {useState, useEffect} from "react";
-import {FaUserCheck, FaChartPie, FaCog} from "react-icons/fa";
+import React, { useState, useEffect } from "react";
+import { FaUserCheck, FaChartPie, FaCog } from "react-icons/fa";
 
-function HeroSection() {
-    const [users, setUsers] = useState(500);
-    const [tasks, setTasks] = useState(1000);
+const HeroSection: React.FC = () => {
+    const [users, setUsers] = useState<number>(500);
+    const [tasks, setTasks] = useState<number>(1000);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -27,7 +27,7 @@ function HeroSection() {
         >
             <div className="container">
                 <h1 className="display-2 fw-bold">AI - The Future of Automation</h1>
-                <p className="lead mt-3">Smart, Fast, and Reliable AI-powered solutions tailored for you. </p>
+                <p className="lead mt-3">Smart, Fast, and Reliable AI-powered solutions tailored for you.</p>
                 <div className="mt-4">
                     <a href="/Contact" className="btn btn-lg btn-warning px-5 py-2 fw-bold">
                         Start Exploring
@@ -54,6 +54,6 @@ function HeroSection() {
             </div>
         </section>
     );
-}
+};
 
 export default HeroSection;

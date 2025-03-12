@@ -1,8 +1,15 @@
 import React from 'react';
 import { FaStar, FaStarHalfAlt } from 'react-icons/fa';
 
-function Testimonials() {
-  const aiTestimonials = [
+interface Testimonial {
+  name: string;
+  feedback: string;
+  img: string;
+  rating: number;
+}
+
+const Testimonials: React.FC = () => {
+  const aiTestimonials: Testimonial[] = [
     {
       name: "OpenAI",
       feedback: "This AI-powered app has set new standards in automation and AI-driven solutions.",
@@ -27,7 +34,6 @@ function Testimonials() {
       img: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
       rating: 5,
     },
-    
     {
       name: "Anthropic AI",
       feedback: "The advanced AI solutions provided here have significantly improved our NLP models.",
@@ -43,10 +49,10 @@ function Testimonials() {
   ];
 
   // Function to generate star ratings
-  const renderStars = (rating) => {
+  const renderStars = (rating: number) => {
     const fullStars = Math.floor(rating);
     const halfStar = rating % 1 !== 0;
-    
+
     return (
       <>
         {[...Array(fullStars)].map((_, i) => (
@@ -80,10 +86,9 @@ function Testimonials() {
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );
-}
+};
 
 export default Testimonials;

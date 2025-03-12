@@ -1,65 +1,83 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLightbulb, faChartLine, faLock, faRocket, faUsers, faHeadset, faCog, faShieldAlt, faBrain } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+import {
+  faLightbulb,
+  faChartLine,
+  faLock,
+  faRocket,
+  faUsers,
+  faHeadset,
+  faCog,
+  faShieldAlt,
+  faBrain,
+} from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
-function Benefits() {
-  const benefits = [
+// Define Type for Benefit Item
+interface BenefitItem {
+  icon: IconDefinition;
+  title: string;
+  description: string;
+  link: string;
+}
+
+const Benefits: React.FC = () => {
+  const benefits: BenefitItem[] = [
     {
       icon: faLightbulb,
       title: "Innovative AI Solutions",
       description: "Leverage cutting-edge AI algorithms to automate tasks and enhance efficiency.",
-      link: "/benefits/ai-solutions"
+      link: "/benefits/ai-solutions",
     },
     {
       icon: faChartLine,
       title: "Advanced Analytics",
       description: "Gain deep insights into your data with our powerful analytics and reporting tools.",
-      link: "/benefits/analytics"
+      link: "/benefits/analytics",
     },
     {
       icon: faLock,
       title: "Secure & Reliable",
       description: "We ensure top-tier security and encryption to safeguard your sensitive information.",
-      link: "/benefits/security"
+      link: "/benefits/security",
     },
     {
       icon: faRocket,
       title: "Boost Performance",
       description: "Enhance productivity and optimize workflows with AI-driven automation.",
-      link: "/benefits/performance"
+      link: "/benefits/performance",
     },
     {
       icon: faUsers,
       title: "Seamless Collaboration",
       description: "Work efficiently with your team through real-time collaboration tools.",
-      link: "/benefits/collaboration"
+      link: "/benefits/collaboration",
     },
     {
       icon: faHeadset,
       title: "24/7 Customer Support",
       description: "Get assistance anytime with our dedicated AI and human support team.",
-      link: "/benefits/support"
+      link: "/benefits/support",
     },
     {
       icon: faCog,
       title: "Customizable Features",
       description: "Tailor our platform to fit your business needs with flexible customization options.",
-      link: "/benefits/customization"
+      link: "/benefits/customization",
     },
     {
       icon: faShieldAlt,
       title: "Scalable Solutions",
       description: "Our technology grows with your business, ensuring seamless scalability.",
-      link: "/benefits/scalability"
+      link: "/benefits/scalability",
     },
     {
       icon: faBrain,
       title: "AI-Powered Decision Making",
       description: "Make smarter business decisions with AI-driven predictive analytics and automation.",
-      link: "/benefits/ai-decision-making"
-    }
+      link: "/benefits/ai-decision-making",
+    },
   ];
 
   return (
@@ -77,7 +95,9 @@ function Benefits() {
                   <p className="text-muted">{benefit.description}</p>
                 </div>
                 <div className="pb-3 text-center">
-                  <Link to={benefit.link} className="btn btn-primary mt-3">Learn More</Link>
+                  <Link to={benefit.link} className="btn btn-primary mt-3">
+                    Learn More
+                  </Link>
                 </div>
               </div>
             </div>
@@ -86,6 +106,6 @@ function Benefits() {
       </div>
     </section>
   );
-}
+};
 
 export default Benefits;
