@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "../src/Styles/Cursor.css";
-const Cursor = () => {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+
+const Cursor: React.FC = () => {
+  const [position, setPosition] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
 
   useEffect(() => {
-    const moveCursor = (e) => {
+    const moveCursor = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
 

@@ -54,15 +54,15 @@ const Subscription = () => {
           <h3><FaQuestionCircle className="icon" /> Common Issues & Solutions</h3>
           <h5><FaKey className="icon" /> I Forgot My Password. What Should I Do?</h5>
           <p>Reset your password below:</p>
-          <Button variant="warning" className="full-width-button"><FaSyncAlt className="icon" /> Reset Password</Button>
+          <Button variant="warning" className="full-width-button"><FaSyncAlt className="" /> Reset Password</Button>
           
           <h5 className="mt-3"><FaExclamationTriangle className="icon" /> AI Is Not Responding Properly.</h5>
           <p><FaCheckCircle className="icon" /> Check your <strong>Internet Connection</strong>.<br /><FaCheckCircle className="icon" /> Clear <strong>Cookies & Cache</strong>.<br /><FaCheckCircle className="icon" /> If the issue persists, contact support.</p>
-          <Button variant="primary" className="full-width-button"><FaEnvelope className="icon" /> Contact Support</Button>
+          <Button variant="primary" className="full-width-button"><FaEnvelope className="" /> Contact Support</Button>
           
           <h5 className="mt-3"><FaCreditCard className="icon" /> My Payment Failed.</h5>
           <p><FaCheckCircle className="icon" /> Ensure your <strong>Card is Valid</strong> and that your bank allows transactions.</p>
-          <Button variant="danger" className="full-width-button"><FaEnvelope className="icon" /> Email Support</Button>
+          <Button variant="danger" className="full-width-button"><FaEnvelope className="" /> Email Support</Button>
         </Card.Body>
       </Card>
     </Container>

@@ -11,6 +11,8 @@ import Help from "./component/Help";
 import Blog from "./component/Blog";
 import Privacy from "./component/Privacy";
 import Feature from "./component/Feature";
+import PricingSection from "../src/component/First/Pricing";
+import Price from "./component/Price";
 
 function App() {
     return (
@@ -25,11 +27,12 @@ function App() {
                 <Route path="/Privacy" element={<Privacy />} />
                 <Route path="/Contact" element={<Contact />} />
                 <Route path="/Features" element={<Feature />} />
+                <Route path="/Price" element={<Price/>}/>
+                <Route path="/Pricing" element={<PricingSection />} />
                 <Route path="/Faqs" element={<Faqs />} />
                 <Route path="/Help" element={<Help />} />
             </Routes>
         </>
     );
 }
-
 export default App;

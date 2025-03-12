@@ -2,8 +2,8 @@ import React from "react";
 import { Button } from "react-bootstrap";
 import "../src/Styles/WhatsAppButton.css";
 
-const WhatsAppButton = () => {
-  const phoneNumber = "03257048768"; 
+const WhatsAppButton: React.FC = () => {
+  const phoneNumber: string = "03257048768";
 
   return (
     <a

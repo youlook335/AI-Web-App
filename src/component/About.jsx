@@ -22,7 +22,7 @@ const AboutUs = () => {
                         <Benefits />
                     </div>
                     <div className="text-center">
-                        <Button variant="primary" className="text center cta-primary" href="youloos477@gmail.com">
+                        <Button variant="" className="text center cta-primary" href="youloos477@gmail.com">
                             Contact Us
                         </Button>
                     </div>

@@ -1,19 +1,18 @@
-import React, {useState, useRef, useEffect} from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const ChatButton = () => {
-    const [isExpanded, setIsExpanded] = useState(false);
-    const [message, setMessage] = useState("");
-    const inputRef = useRef(null);
+const ChatButton: React.FC = () => {
+    const [isExpanded, setIsExpanded] = useState<boolean>(false);
+    const [message, setMessage] = useState<string>("");
+    const inputRef = useRef<HTMLDivElement>(null);
 
     // Function to close input when clicking outside
-    const handleClickOutside = (event) => {
-        if (inputRef.current && !inputRef.current.contains(event.target)) {
+    const handleClickOutside = (event: MouseEvent) => {
+        if (inputRef.current && !inputRef.current.contains(event.target as Node)) {
             setIsExpanded(false);
         }
     };
 
-    // Add event listener when input is open
     useEffect(() => {
         if (isExpanded) {
             document.addEventListener("mousedown", handleClickOutside);
@@ -32,12 +31,10 @@ const ChatButton = () => {
                 className={`d-flex align-items-center bg-primary shadow-lg rounded-pill px-3 ${
                     isExpanded ? "py-2 w-100" : "py-1"
                 }`}
-                style={{maxWidth: "350px", transition: "0.3s"}}
+                style={{ maxWidth: "350px", transition: "0.3s" }}
             >
                 <button
-                    className={`btn ${
-                        isExpanded ? "btn-primary" : "btn-primary"
-                    } rounded-pill flex-grow-1 fw-bold text-start`}
+                    className="btn btn-primary rounded-pill flex-grow-1 fw-bold text-start"
                     onClick={() => setIsExpanded(true)}
                 >
                     {isExpanded ? "Type your message..." : "Ask BootPress"}

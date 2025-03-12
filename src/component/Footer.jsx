@@ -9,9 +9,9 @@ const Footer = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-md-4 col-lg-3 mb-4">
-                        <Link className="navbar-brand fw-bold text-dark" to="/Home">
+                        <Link className="navbar-brand fw-bold text-dark" to="/">
                             <h4>
-                                Boot<span className="text-primary">Press</span>
+                                Boot<span className="fw-bold text-primary">Press</span>
                             </h4>
                         </Link>{" "}
                         <p className="text-muted">Revolutionizing the way you search with AI-powered innovation.</p>
@@ -26,23 +26,23 @@ const Footer = () => {
                         <h5 className="fw-bold text-primary">Quick Links</h5>
                         <ul className="list-unstyled">
                             <li>
-                                <Link to="/" className="footer-link hover-underline">
+                                <Link to="/Home" className="footer-link hover-underline">
                                     Home
                                 </Link>
                             </li>
                             <li>
                                 <Link to="/About" className="footer-link hover-underline">
-                                    About Us
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to="/Services" className="footer-link hover-underline">
-                                    Services
+                                    About
                                 </Link>
                             </li>
                             <li>
                                 <Link to="/Blog" className="footer-link hover-underline">
                                     Blog
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/Services" className="footer-link hover-underline">
+                                    Services
                                 </Link>
                             </li>
                             <li>
@@ -58,6 +58,11 @@ const Footer = () => {
                             <li>
                                 <Link to="/Faqs" className="footer-link hover-underline">
                                     FAQs
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/Features" className="footer-link hover-underline">
+                                    Feature
                                 </Link>
                             </li>
                             <li>
@@ -88,7 +93,7 @@ const Footer = () => {
                 </div>
                 <hr className="text-muted" />
                 <div className="d-flex justify-content-between align-items-center">
-                    <p className="text-muted mb-0">&copy; 2025 DeepSeek. All Rights Reserved.</p>
+                    <p className="text-muted mb-0">&copy; 2025 Bootpress. All Rights Reserved.</p>
                     <div>
                         <a href="#" className="social-icon">
                             <FaFacebook size={22} />

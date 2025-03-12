@@ -1,5 +1,5 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom';
 
 function TeamSection() {
   const teamMembers = [
@@ -48,6 +48,7 @@ function TeamSection() {
               </div>
             </div>
           ))}
+          <Link><button className='btn btn-primary'>Contact</button></Link>
         </div>
       </div>
     </section>

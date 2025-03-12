@@ -107,10 +107,5 @@
     font-size: 1.2rem;
     padding: 12px 25px;
     border-radius: 30px;
-    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
-}
-
-.cta-button:hover {
-    background: #0056b3;
-    transform: scale(1.05);
+    transition: background 0.3s ease-in-out;
 }

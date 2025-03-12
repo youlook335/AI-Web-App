@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FaComments, FaLanguage, FaChartLine, FaMicrophone, FaCloud, FaUserShield } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 function Features() {
   return (
@@ -49,11 +50,11 @@ function Features() {
             </a>
           </div>
           <div className="col-md-4 text-center mb-4">
-            <a href="/data-privacy" className="text-decoration-none text-dark">
+            <Link to="/privacy" className="text-decoration-none text-dark">
               <FaUserShield size={50} className="text-secondary mb-3" />
               <h3>Data Privacy</h3>
               <p>End-to-end encryption to protect user information.</p>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

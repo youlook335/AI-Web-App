@@ -97,6 +97,11 @@ const Navbar = () => {
                                                 Feature
                                             </Link>
                                         </li>
+                                        <li>
+                                            <Link className="dropdown-item" to="/Pricing">
+                                            Pricing
+                                            </Link>
+                                        </li>
                                     </ul>
                                 )}
                             </li>

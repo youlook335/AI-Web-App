@@ -1,24 +1,10 @@
-
-  .card {
+.card {
     border: none;
     border-radius: 12px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  }
-  
-  .card:hover {
-    transform: scale(1.02);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-  }
-  
-  button {
+    transition: transform 0.3s ease-in-out;
+}
+button {
     font-size: 1rem;
     border-radius: 8px;
     transition: all 0.3s ease-in-out;
-  }
-  
-  button:hover {
-    transform: scale(1.05);
-  }
-  
-
-  
+}

@@ -14,21 +14,10 @@
 
 .privacy-icon {
     color: #007bff;
-    margin-right: 10px;
     cursor: pointer;
 }
 
-h4 {
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 8px;
-    transition: 0.3s ease-in-out;
-}
 
-h4:hover {
-    background: rgba(0, 123, 255, 0.2);
-    transform: scale(1.02);
-}
 
 .dark-mode {
     background: #1e1e1e;

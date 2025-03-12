@@ -2,8 +2,15 @@ import React, { useEffect, useState } from 'react';
 import '../src/Styles/Translator.css';
 import img from '../public/translate.png';
 
-const Translater = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
+declare global {
+    interface Window {
+        googleTranslateElementInit: () => void;
+        google: any;
+    }
+}
+
+const Translater: React.FC = () => {
+    const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
     useEffect(() => {
         const script = document.createElement('script');
@@ -12,19 +19,21 @@ const Translater = () => {
         document.body.appendChild(script);
 
         window.googleTranslateElementInit = () => {
-            new window.google.translate.TranslateElement(
-                { pageLanguage: 'en' },
-                "translatorId"
-            );
+            if (window.google && window.google.translate) {
+                new window.google.translate.TranslateElement(
+                    { pageLanguage: 'en' },
+                    "translatorId"
+                );
+            }
         };
     }, []);
 
-    const openMenu = () => {
+    const openMenu = (): void => {
         setMenuOpen(!menuOpen);
     };
 
-    const translateto = (lang) => {
-        const combo = document.querySelector(".goog-te-combo");
+    const translateto = (lang: string): void => {
+        const combo = document.querySelector<HTMLSelectElement>(".goog-te-combo");
         if (combo) {
             combo.value = lang;
             combo.dispatchEvent(new Event("change"));
@@ -40,7 +49,7 @@ const Translater = () => {
                 <div onClick={() => translateto('es')}>Spanish</div>
                 <div onClick={() => translateto('fr')}>French</div>
                 <div onClick={() => translateto('de')}>German</div>
-                <div onClick={() => translateto('it')}>Italic</div>
+                <div onClick={() => translateto('it')}>Italian</div>
                 <div onClick={() => translateto('zh-CN')}>Chinese</div>
             </div>
 
