@@ -1,5 +1,5 @@
 import React from "react";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faRobot,
     faBrain,
@@ -14,8 +14,15 @@ import {
 import "../Styles/Services.css";
 import Services1 from "./Services1";
 
-function Services() {
-    const services = [
+interface Service {
+    icon: any;
+    title: string;
+    description: string;
+    features: string[];
+}
+
+const Services: React.FC = () => {
+    const services: Service[] = [
         {
             icon: faRobot,
             title: "AI Chatbot",
@@ -113,33 +120,31 @@ function Services() {
     ];
 
     return (
-        <>
         <div className="bg-light mt-2">
-        <div className="container bg-light">
-            <h1 className="my-5 text-center">AI Services - The Future of Advanced Technology</h1>
-            <div className="row">
-                {services.map((service, index) => (
-                    <div className="col-md-4" key={index}>
-                        <div className="card mb-4">
-                            <div className="card-body privacy-icon text-center">
-                                <FontAwesomeIcon icon={service.icon} size="3x" className="mb-3" />
-                                <h5 className="card-title">{service.title}</h5>
-                                <p className="card-text">{service.description}</p>
-                                <ul>
-                                    {service.features.map((feature, idx) => (
-                                        <li key={idx}>{feature}</li>
-                                    ))}
-                                </ul>
+            <div className="container bg-light">
+                <h1 className="my-5 text-center">AI Services - The Future of Advanced Technology</h1>
+                <div className="row">
+                    {services.map((service, index) => (
+                        <div className="col-md-4" key={index}>
+                            <div className="card mb-4">
+                                <div className="card-body privacy-icon text-center">
+                                    <FontAwesomeIcon icon={service.icon} size="3x" className="mb-3" />
+                                    <h5 className="card-title">{service.title}</h5>
+                                    <p className="card-text">{service.description}</p>
+                                    <ul>
+                                        {service.features.map((feature, idx) => (
+                                            <li key={idx}>{feature}</li>
+                                        ))}
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
+                <Services1 />
             </div>
-            <Services1 />
         </div>
-        </div>
-        </>
     );
-}
+};
 
 export default Services;

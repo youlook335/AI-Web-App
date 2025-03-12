@@ -1,13 +1,13 @@
 import React from "react";
 
-const Map = () => {
+const Map: React.FC = () => {
   return (
     <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "100%", padding: "20px" }}>
       <div
         className="map-container"
         style={{
           width: "90%",
-          margin:"50px",
+          margin: "50px",
           height: "500px",
           borderRadius: "15px",
           overflow: "hidden",

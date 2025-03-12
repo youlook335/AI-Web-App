@@ -1,8 +1,8 @@
 import React from "react";
-import {FaComments, FaLanguage, FaChartLine, FaMicrophone, FaCloud, FaUserShield} from "react-icons/fa";
-import {Link} from "react-router-dom";
+import { FaComments, FaLanguage, FaChartLine, FaMicrophone, FaCloud, FaUserShield } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
-function Features() {
+const Features: React.FC = () => {
     return (
         <section className="features py-5 bg-light">
             <div className="container">
@@ -59,6 +59,6 @@ function Features() {
             </div>
         </section>
     );
-}
+};
 
 export default Features;

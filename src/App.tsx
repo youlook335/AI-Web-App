@@ -1,6 +1,6 @@
 import "./App.css";
 import React from "react";
-import {Routes, Route} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./component/Home";
 import Projects from "./component/Projects";
 import Services from "./component/Services";
@@ -14,7 +14,7 @@ import Feature from "./component/Feature";
 import Price from "./component/Price";
 import PricingSection from "./component/First/Pricing";
 
-function App() {
+const App: React.FC = () => {
     return (
         <>
             <Routes>
@@ -27,12 +27,13 @@ function App() {
                 <Route path="/Privacy" element={<Privacy />} />
                 <Route path="/Contact" element={<Contact />} />
                 <Route path="/Features" element={<Feature />} />
-                <Route path="/Price" element={<Price/>}/>
+                <Route path="/Price" element={<Price />} />
                 <Route path="/Pricing" element={<PricingSection />} />
                 <Route path="/Faqs" element={<Faqs />} />
                 <Route path="/Help" element={<Help />} />
             </Routes>
         </>
     );
-}
+};
+
 export default App;

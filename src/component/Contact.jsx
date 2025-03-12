@@ -1,6 +1,5 @@
 import {useState} from "react";
 import {FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaPhone, FaEnvelope, FaGlobe} from "react-icons/fa";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "../Styles/Contact.css";
 import Map from "./Map";
 
