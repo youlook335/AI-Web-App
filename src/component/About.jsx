@@ -1,6 +1,5 @@
 import React from "react";
 import {Container, Button} from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "../Styles/About.css";
 import Hero from "./Mean-about/Hero";
 import Benefits from "./First/Benefits";

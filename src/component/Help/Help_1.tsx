@@ -1,9 +1,12 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import { Envelope, ChatDots, Telephone, Clock, Bell, Newspaper, Twitter, Discord } from "react-bootstrap-icons";
+import { 
+  Envelope, ChatDots, Telephone, Clock, Bell, Newspaper, 
+  Twitter, Discord 
+} from "react-bootstrap-icons";
 import "../../Styles/Help1.css";
 
-const Help_1 = () => {
+const Help_1: React.FC = () => {
   return (
     <Container className="Help_1-container">
       <h2 className="section-title"> Contact Us</h2>
@@ -33,15 +36,15 @@ const Help_1 = () => {
       <h2 className="section-title">Latest Updates & Community</h2>
       <p><Bell size={24} className="icon" /> <strong>Stay Updated!</strong></p>
       <div className="button-group">
-      <Button variant="info" href="#subscribe-newsletter" className="action-btn">
-        <Newspaper size={20} className="icon" /> Join Our Newsletter
-      </Button>
-      <Button variant="dark" href="#follow-twitter" className="action-btn ml-2">
-        <Twitter size={20} className="icon" /> Follow Us on Twitter
-      </Button>
-      <Button variant="secondary" href="#join-discord" className="action-btn ml-2">
-        <Discord size={20} className="icon" /> Join Our Community on Discord
-      </Button>
+        <Button variant="info" href="#subscribe-newsletter" className="action-btn">
+          <Newspaper size={20} className="icon" /> Join Our Newsletter
+        </Button>
+        <Button variant="dark" href="#follow-twitter" className="action-btn ml-2">
+          <Twitter size={20} className="icon" /> Follow Us on Twitter
+        </Button>
+        <Button variant="secondary" href="#join-discord" className="action-btn ml-2">
+          <Discord size={20} className="icon" /> Join Our Community on Discord
+        </Button>
       </div>
     </Container>
   );

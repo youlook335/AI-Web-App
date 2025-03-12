@@ -6,7 +6,6 @@ import TeamSection from "./First/TeamSection";
 import HeroSection from "./First/HeroSection";
 import Testimonial from "./First/Testimonials"
 import FaQ from "./First/FaQ";
-// import "../Styles/Home.css";
 
 const Home = () => {
     return (
