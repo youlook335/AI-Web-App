@@ -11,9 +11,6 @@
     transition: all 0.3s ease-in-out;
 }
 
-.footer-link:hover {
-    color: #007bff;
-}
 .social-icon {
     color: #333;
     margin-right: 15px;
