@@ -3,24 +3,18 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaPlus, FaMinus } from "react-icons/fa";
 
-// Define Type for FAQ Item
-interface FAQItem {
-  question: string;
-  answer: string;
-}
-
-const FAQ: React.FC = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+const FAQ = () => {
+  const [openIndex, setOpenIndex] = useState(null);
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
 
-  const toggleAnswer = (index: number) => {
+  const toggleAnswer = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  const faqs: FAQItem[] = [
+  const faqs = [
     {
       question: "What is AI?",
       answer: "AI (Artificial Intelligence) is a technology that enables computers to solve problems and make decisions similar to human intelligence.",

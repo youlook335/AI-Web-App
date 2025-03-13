@@ -5,7 +5,7 @@ import Pricing from "./First/Pricing";
 import TeamSection from "./First/TeamSection";
 import HeroSection from "./First/HeroSection";
 import Testimonial from "./First/Testimonials";
-import FaQ from "./First/FaQ";
+import FAQ from "./First/FAQ";
 
 const Home: React.FC = () => {
     return (
@@ -16,7 +16,7 @@ const Home: React.FC = () => {
             <Benefits />
             <Pricing />
             <Testimonial />
-            <FaQ />
+            <FAQ/>
         </>
     );
 };

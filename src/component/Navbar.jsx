@@ -39,7 +39,7 @@ const Navbar = () => {
     return (
         <>
             <nav className={`navbar navbar-expand-lg custom-navbar ${scrolled ? "navbar-scrolled" : ""}`}>
-                <div className="container">
+                <div className="container-fluid">
                     <Link className="navbar-brand fw-bold text-dark" to="/">
                         Boot<span className="text-primary">Press</span>
                     </Link>
