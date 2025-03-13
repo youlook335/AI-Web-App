@@ -1,4 +1,4 @@
-<h1>COmplete this Project and Changing in a Live Changing This Project is A AI And AI Name is Bootpress AI And this is a link 👇</h1>
+<h1>Complete this Project and Changing in a Live Changing This Project is A AI And AI Name is Bootpress AI And this is a link 👇</h1>
 https://bootpress-ai.vercel.app/
 
 # React + Vite
