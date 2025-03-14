@@ -2,20 +2,14 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Card } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
-import { Link } from "react-router-dom";
-
-// Define Props for PricingCard
-interface PricingCardProps {
-  title: string;
-  price: string;
-  description: string;
-  features: string[];
-  buttonText: string;
-}
+import CountdownTimer from "./Offer";
 
 // Pricing Card Component
-const PricingCard: React.FC<PricingCardProps> = ({ title, price, features, buttonText, description }) => {
+const PricingCard = ({ title, price, features, description }) => {
+  // قیمت سے ڈالر کا نشان ہٹا کر نمبر میں کنورٹ کرنا
+  const numericPrice = parseFloat(price.replace(/[^0-9.]/g, ""));
+  const discountedPrice = (numericPrice * 0.9).toFixed(2); // 10% رعایت
+
   return (
     <Card 
       className="text-dark bg-light shadow-lg rounded-4 p-4 text-center border border-primary"
@@ -23,7 +17,9 @@ const PricingCard: React.FC<PricingCardProps> = ({ title, price, features, butto
     >
       <Card.Header className="fs-4 fw-bold text-primary">{title}</Card.Header>
       <Card.Body>
-        <h2 className="fw-bold mb-3 text-dark">{price}</h2>
+        <h4 className="mb-3 text-muted">
+          <del className="text-danger">{price}</del> → <span className="text-success">${discountedPrice}/month</span>
+        </h4>
         <p className="text-muted mb-3">{description}</p>
         <ul className="list-unstyled mb-4">
           {features.map((feature, index) => (
@@ -32,33 +28,21 @@ const PricingCard: React.FC<PricingCardProps> = ({ title, price, features, butto
             </li>
           ))}
         </ul>
-        <Button variant="primary" className="rounded-pill px-4 py-2">
-          {buttonText}
-        </Button>
       </Card.Body>
     </Card>
   );
 };
 
-// Define Type for Plans
-interface PricingPlan {
-  title: string;
-  price: string;
-  description: string;
-  features: string[];
-  buttonText: string;
-}
-
 // Pricing Section Component
-const PricingSection: React.FC = () => {
+const Psection = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // اینیمیشن کا دورانیہ
-      once: true, // صرف ایک بار اینیمیشن چلے گی
+      duration: 1000,
+      once: true,
     });
   }, []);
 
-  const plans: PricingPlan[] = [
+  const plans = [
     {
       title: "Basic Plan",
       price: "$19/month",
@@ -70,7 +54,6 @@ const PricingSection: React.FC = () => {
         "Access to Community Forum",
         "Monthly Performance Reports",
       ],
-      buttonText: "Get Started",
     },
     {
       title: "Enterprise Plan",
@@ -86,7 +69,6 @@ const PricingSection: React.FC = () => {
         "Dedicated Account Manager",
         "Unlimited Ad Campaigns",
       ],
-      buttonText: "Contact Us",
     },
     {
       title: "Pro Plan",
@@ -100,13 +82,11 @@ const PricingSection: React.FC = () => {
         "Social Media Integration",
         "Weekly AI Insights",
       ],
-      buttonText: "Upgrade Now",
     },
   ];
 
   return (
     <div className="container py-5 bg-light" data-aos="fade-up">
-      <h2 className="text-center fs-1 fw-bold mb-5 text-primary">Pricing Plans</h2>
       <div className="row g-4">
         {plans.map((plan, index) => (
           <div key={index} className="col-md-4">
@@ -114,21 +94,11 @@ const PricingSection: React.FC = () => {
           </div>
         ))}
       </div>
-      <div className="text-center mt-5" data-aos="zoom-in">
-        <Link to="/Offer">
-          <Button variant="outline-primary" className="rounded-pill px-4 py-2">
-            Your Own Offer
-          </Button>
-        </Link>
-      </div>
+      <div className="text-center mt-5">
+        <CountdownTimer/>
+    </div>
     </div>
   );
 };
 
-export default PricingSection;
-
-
-
-
-
-
+export default Psection;

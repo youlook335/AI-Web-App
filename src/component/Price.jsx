@@ -1,35 +1,60 @@
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import React, { useEffect } from "react";
+import confetti from "canvas-confetti";
+import { TypeAnimation } from "react-type-animation";
+import Psection from "./Psection";
 
-const Price = () => {
-  const [balloons, setBalloons] = useState([]);
+const ServicesOffers = () => {
+
+
+  const startConfetti = () => {
+    const duration = 100000;
+    const end = Date.now() + duration;
+
+    const frame = () => {
+      confetti({
+        particleCount: 15,
+        startVelocity: 50,
+        spread: 70,
+        origin: {
+          x: Math.random(),
+          y: Math.random() * 3,
+        },
+        gravity: 0.4,
+        ticks: 150,
+        scalar: 1.2,
+      });
+
+      if (Date.now() < end) {
+        requestAnimationFrame(frame);
+      }
+    };
+
+    frame();
+  };
 
   useEffect(() => {
-    const newBalloons = Array.from({ length: 50 }).map((_, index) => ({
-      id: index,
-      left: Math.random() * 100 + "vw",
-      delay: Math.random() * 3,
-    }));
-    setBalloons(newBalloons);
-  }, []);
+      const confettiTimeout = setTimeout(() => {
+        startConfetti();
+      }, 1000);
 
+      return () => clearTimeout(confettiTimeout);
+    }
+  )
   return (
-    <div className="relative flex items-center justify-center h-screen bg-blue-500 overflow-hidden">
-      <h1 className="text-white text-5xl font-bold z-10">Aaya Celebration</h1>
-      {balloons.map((balloon) => (
-        <motion.div
-          key={balloon.id}
-          initial={{ y: "-100vh", opacity: 0 }}
-          animate={{ y: "100vh", opacity: 1 }}
-          transition={{ duration: 3, delay: balloon.delay }}
-          className="absolute text-3xl"
-          style={{ left: balloon.left }}
-        >
-          🎈
-        </motion.div>
-      ))}
-    </div>
+    <>
+        <h1 className=" pt-5 text-center">
+          <TypeAnimation
+            sequence={["Special Offer In Pricing", 1000, "", 500]}
+            wrapper="span"
+            speed={50}
+            style={{ color: "#007bff", fontWeight: "bold" }}
+            repeat={Infinity}
+          />
+        </h1>
+        <Psection/>
+
+</>
   );
 };
 
-export default Price;
+export default ServicesOffers;
