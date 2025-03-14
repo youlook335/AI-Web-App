@@ -3,7 +3,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { Card } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 
 // Define Props for PricingCard

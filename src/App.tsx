@@ -17,6 +17,7 @@ import PricingSection from "./component/First/Pricing";
 const App: React.FC = () => {
     return (
         <>
+        <div className="bg-light">
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/Home" element={<Home />} />
@@ -32,6 +33,7 @@ const App: React.FC = () => {
                 <Route path="/Faqs" element={<Faqs />} />
                 <Route path="/Help" element={<Help />} />
             </Routes>
+            </div>
         </>
     );
 };

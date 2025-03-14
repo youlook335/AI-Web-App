@@ -25,19 +25,19 @@ function TeamSection() {
     {
       name: "Tanveer",
       role: "Lead Developer",
-      img: "public/Boy (6) fit img in nonw.jpg",
+      img: "http://localhost:5173/public/Boy%20(6)%20fit%20img%20in%20nonw.jpg",
       highlight: true, // Center person (highlighted)
       social: {
-        linkedin: "https://linkedin.com/in/tanveer",
-        github: "https://github.com/tanveer",
-        twitter: "https://twitter.com/tanveer",
-        facebook: "https://facebook.com/tanveer",
+        linkedin: "https://www.linkedin.com/in/tanveer-khan-31074033a/",
+        github: "https://github.com/youlook335",
+        twitter: "https://x.com/youloos477",
+        facebook: "https://www.facebook.com/people/Tanveer-Khan/pfbid02nbB9zgQNHkWiJmraxk661fek8yCBimYKipLXDWqNKaQ76FRehrTAK4oKZhh5Ak4Wl/",
       },
     },
     {
       name: "M-Maroof",
       role: "Data Scientist & Backend Developer",
-      img: "public/Boy (6) fit img in nonw.jpg",
+      img: "http://localhost:5173/public/Boy%20(6)%20fit%20img%20in%20nonw.jpg",
       highlight: false,
       social: {
         linkedin: "https://linkedin.com/in/m-maroof",
