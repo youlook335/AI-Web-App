@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App.tsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import Cursor from "./Cursor.tsx";
+// import Cursor from "./Cursor.tsx";
 import Navbar from "./component/Navbar.jsx";
 import ChatButton from "./ChatButton.jsx";
 import WhatsAppButton from "./WhatsAppButton.tsx";
@@ -13,7 +13,7 @@ import Translater from "./Translater.tsx";
 
 createRoot(document.getElementById("root")).render(
     <BrowserRouter>
-        <Cursor />
+        {/* <Cursor /> */}
         <Navbar />
         <App />
         <ChatButton />
