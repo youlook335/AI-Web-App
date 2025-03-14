@@ -25,7 +25,7 @@ const Testimonials: React.FC = () => {
     {
       name: "DeepSeek AI",
       feedback: "Our collaboration with this AI platform has led to remarkable advancements in AI research.",
-      img: "http://localhost:5173/public/deepseek-translation.png",
+      img: "deepseek-translation.png",
       rating: 5,
     },
     {
