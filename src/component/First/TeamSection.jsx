@@ -13,7 +13,7 @@ function TeamSection() {
     {
       name: "Unknown",
       role: "Cyber Security Leader",
-      img: "/public/Boy (6) fit img in nonw.jpg",
+      img: "public/Boy (6) fit img in nonw.jpg",
       highlight: false,
       social: {
         linkedin: "https://linkedin.com/in/unknown",
@@ -25,7 +25,7 @@ function TeamSection() {
     {
       name: "Tanveer",
       role: "Lead Developer",
-      img: "/public/Boy (6) fit img in nonw.jpg",
+      img: "public/Boy (6) fit img in nonw.jpg",
       highlight: true, // Center person (highlighted)
       social: {
         linkedin: "https://linkedin.com/in/tanveer",
@@ -37,7 +37,7 @@ function TeamSection() {
     {
       name: "M-Maroof",
       role: "Data Scientist & Backend Developer",
-      img: "/public/Boy (6) fit img in nonw.jpg",
+      img: "public/Boy (6) fit img in nonw.jpg",
       highlight: false,
       social: {
         linkedin: "https://linkedin.com/in/m-maroof",

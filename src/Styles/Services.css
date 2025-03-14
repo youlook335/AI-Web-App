@@ -5,19 +5,12 @@ h1 {
 
 .card {
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .card-body {
-    background-color: #ffffff;
     padding: 30px;
     border-radius: 10px;
 }
-
-.card-body:hover {
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-}
-
 .card-title {
     font-size: 20px;
     font-weight: 600;
@@ -36,7 +29,6 @@ ul {
 }
 
 ul li {
-    /* text-align: center; */
     color: #495057;
 }
 
