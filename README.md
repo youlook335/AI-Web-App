@@ -1,5 +1,6 @@
-<h1>Complete this Project and Changing in a Live Changing This Project is A AI And AI Name is Bootpress AI And this is a link 👇</h1>
+<h1>This is my project, which I and my collaborator have created. I will be making live changes to it. This is an AI-based project, and we will be adding many features to it. Here is the link 👇; please visit our website</h1>
 https://bootpress-ai.vercel.app/
+https://tiny-beignet-06086a.netlify.app/
 
 # React + Vite
 
