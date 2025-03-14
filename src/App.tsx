@@ -13,6 +13,8 @@ import Privacy from "./component/Privacy";
 import Feature from "./component/Feature";
 import Price from "./component/Price";
 import PricingSection from "./component/First/Pricing";
+import Login from "./component/Login";
+import Signup from "./component/Signup";
 
 const App: React.FC = () => {
     return (
@@ -32,6 +34,8 @@ const App: React.FC = () => {
                 <Route path="/Pricing" element={<PricingSection />} />
                 <Route path="/Faqs" element={<Faqs />} />
                 <Route path="/Help" element={<Help />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/signup" element={<Signup />} />
             </Routes>
             </div>
         </>
