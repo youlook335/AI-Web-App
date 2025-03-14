@@ -13,7 +13,7 @@ function TeamSection() {
     {
       name: "Unknown",
       role: "Cyber Security Leader",
-      img: "public/Boy (6) fit img in nonw.jpg",
+      img: "http://localhost:5173/public/Boy%20(6)%20fit%20img%20in%20nonw.jpg",
       highlight: false,
       social: {
         linkedin: "https://linkedin.com/in/unknown",
