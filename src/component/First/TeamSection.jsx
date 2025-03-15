@@ -13,7 +13,7 @@ function TeamSection() {
     {
       name: "Unknown",
       role: "Cyber Security Leader",
-      img: "Boy (6) fit img in nonw.jpg",
+      img: "Maroofjpg.jpg",
       highlight: false,
       social: {
         linkedin: "https://linkedin.com/in/unknown",
@@ -37,11 +37,11 @@ function TeamSection() {
     {
       name: "M-Maroof",
       role: "Data Scientist & Backend Developer",
-      img: "Boy (6) fit img in nonw.jpg",
+      img: "Maroofjpg.jpg",
       highlight: false,
       social: {
         linkedin: "https://linkedin.com/in/m-maroof",
-        github: "https://github.com/m-maroof",
+        github: "https://github.com/maroof2424",
         twitter: "https://twitter.com/m-maroof",
         facebook: "https://facebook.com/m-maroof",
       },
