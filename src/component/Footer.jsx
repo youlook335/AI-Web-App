@@ -1,7 +1,7 @@
 import React from "react";
 import "../Styles/Footer.css";
-import {FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaEnvelope, FaPhone} from "react-icons/fa";
-import {Link} from "react-router-dom";
+import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaEnvelope, FaPhone } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -16,10 +16,9 @@ const Footer = () => {
                         </Link>{" "}
                         <p className="text-muted">Revolutionizing the way you search with AI-powered innovation.</p>
                         <p className="text-dark">
-                            <FaEnvelope className="fw-bold text-primary" /> contact@bootpress.com
-                        </p>
+                            <FaEnvelope className="fw-bold text-primary" /> Youloos477@gmail.com                        </p>
                         <p className="text-dark">
-                            <FaPhone className="fw-bold text-primary" /> +1 234 567 890
+                            <FaPhone className="fw-bold text-primary" /> +92 325 70 487 68
                         </p>
                     </div>
                     <div className="col-md-2 col-lg-2 mb-4">
