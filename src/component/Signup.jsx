@@ -19,15 +19,6 @@ const Signup = () => {
         }
     };
 
-    const handleGithubSignup = async () => {
-        try {
-            await signInWithPopup(auth, githubProvider);
-            alert("Signed up with GitHub successfully!");
-        } catch (error) {
-            console.error("GitHub Signup Error:", error);
-        }
-    };
-
     return (
         <div className="container d-flex justify-content-center align-items-center vh-100">
             <div className="card p-4 shadow-lg w-50">
@@ -58,24 +49,6 @@ const Signup = () => {
                             style={{ width: "20px", height: "20px" }}
                         />                        Sign Up with Google
                     </button>
-                    <button style={{
-                        backgroundColor: "#FFFFFF",
-                        border: "2px solid #ddd",
-                        color: "#5F6368",
-                        fontWeight: "500",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        gap: "10px",
-                        padding: "10px 15px",
-                        borderRadius: "20px",
-                        cursor: "pointer"
-
-                    }} className="btn btn-dark w-100" onClick={handleGithubSignup} ><img
-                            src="https://logolook.net/wp-content/uploads/2022/12/GitHub-Emblem.png"
-                            alt="Google logo"
-                            style={{ width: "40px", height: "20px" }}
-                        />  Sign Up with GitHub</button>
                 </div>
                 <p className="text-center mt-2">
                     Already have an account? <Link to="/login">Login</Link>
