@@ -55,6 +55,7 @@ const Login = () => {
     <div className="container d-flex justify-content-center align-items-center vh-100">
       <div className="card p-4 shadow-lg w-50">
         <h2 className="text-center mb-4">Login</h2>
+        <h2 className="text-center mb-4">Only Use a Sign in Google </h2>
 
         {error && <div className="alert alert-danger">{error}</div>}
 
@@ -62,7 +63,7 @@ const Login = () => {
           <input
             type="email"
             className="form-control mb-3"
-            placeholder="Email"
+            placeholder="❌ Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
@@ -70,7 +71,7 @@ const Login = () => {
           <input
             type="password"
             className="form-control mb-3"
-            placeholder="Password"
+            placeholder="❌ Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
@@ -93,6 +94,7 @@ const Login = () => {
             cursor: "pointer"
 
           }} className="btn btn-danger w-100 mb-2" onClick={handleGoogleLogin}>
+            ✅
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJQ9p0kwWYIU-O7dnjXUwIBnxItQb08fMMBQ&s"
               alt="Google logo"
@@ -113,6 +115,7 @@ const Login = () => {
             cursor: "pointer"
 
           }} className="btn btn-dark w-100 mb-2" onClick={handleGithubLogin}>
+            ❌
             <img
               src="https://logolook.net/wp-content/uploads/2022/12/GitHub-Emblem.png"
               alt="Google logo"

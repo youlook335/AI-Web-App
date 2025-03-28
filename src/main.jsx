@@ -12,6 +12,7 @@ import Login from "../src/component/Login.jsx"; // اپنا لاگ ان پیج �
 import { auth } from "./firebaseConfig.js"; // Firebase config امپورٹ کریں
 import { useState, useEffect } from "react";
 import { onAuthStateChanged } from "firebase/auth";
+import LanguageSwitcher from "../src/component/LanguageSwitcher"
 
 const Main = () => {
   const [user, setUser] = useState(null);
@@ -31,10 +32,11 @@ const Main = () => {
     <BrowserRouter>
       {user ? (
         <>
+          <LanguageSwitcher/>
           <Navbar />
           <App />
           <Footer />
-          <Translater />
+          {/* <Translater /> */}
           <WhatsAppButton />
         </>
       ) : (
