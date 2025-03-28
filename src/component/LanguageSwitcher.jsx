@@ -2,28 +2,24 @@ import React, { useEffect } from "react";
 
 const LanguageSwitcher = () => {
   useEffect(() => {
-    const addGoogleTranslateScript = () => {
-      if (!window.googleTranslateElementInit) {
-        const googleTranslateScript = document.createElement("script");
-        googleTranslateScript.src =
-          "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-        googleTranslateScript.async = true;
-        document.body.appendChild(googleTranslateScript);
-      }
-    };
+    if (!window.googleTranslateElementInit) {
+      const googleTranslateScript = document.createElement("script");
+      googleTranslateScript.src =
+        "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+      googleTranslateScript.async = true;
+      document.body.appendChild(googleTranslateScript);
 
-    window.googleTranslateElementInit = () => {
-      new window.google.translate.TranslateElement(
-        {
-          pageLanguage: "en",
-          layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE, // Layout درست کریں
-          includedLanguages: "ur,en,hi,ar,fr,de,zh", // اپنی مرضی کی زبانیں شامل کریں
-        },
-        "google_translate_element"
-      );
-    };
-
-    addGoogleTranslateScript();
+      window.googleTranslateElementInit = () => {
+        new window.google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+            includedLanguages:
+              "af,sq,am,ar,hy,az,eu,be,bn,bg,ca,ceb,zh,co,hr,cs,da,nl,en,eo,et,fi,fr,fy,gl,ka,de,el,gu,ht,ha,haw,he,hi,hmn,hu,is,id,ig,is,it,ja,jv,kn,kk,km,rw,ko,ku,ky,lo,la,lv,lt,lb,mk,mg,ms,ml,mt,mi,mr,mn,my,ne,no,ny,or,ps,fa,pl,pt,pa,ro,ru,sm,gd,sr,st,sd,si,sk,sl,so,es,su,sw,sv,tl,tg,ta,tt,te,th,tr,tk,uk,ur,ug,uz,vi,cy,xh,yi,yo,zu",
+          },
+          "google_translate_element"
+        );
+      };
+    }
   }, []);
 
   return (
